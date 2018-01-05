@@ -1,0 +1,59 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 15px;
+}
+
+.title {
+    font-weight: 600px;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.project {
+    width: 100%;
+    border: 1px solid gray;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.project-header {
+    margin-bottom: 20px;
+}
+
+.project-info {
+    padding: 5px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: black;
+}
+
+#contacts {
+    text-align: center;
+}
+
+.fa {
+    width: 48px;
+    font-size: 18px !important;
+}
+
+@media only screen and (max-width: 360px) {
+    .about-information {
+        width: 100%;
+        text-transform: uppercase;
+        text-align: right;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width: 361px) and (max-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1025px) {
+
+}
