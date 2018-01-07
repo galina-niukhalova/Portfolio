@@ -2,113 +2,126 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portfolio</title>
 
     <link href="css/styles.css" rel="stylesheet">
+    <!-- social icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <header id="header">
-            <section id="logo">
-                <img src="img/logo.jpg" alt="" width="150px">
-            </section>
-            <section id="about">
-                <h1 class="about-information">Galina Niukhalova</h1>
-                <h4 class="about-information">Front-end web developer</h4>
-            </section>
-        </header>
-        <hr>
-
-        <main id="content">
-            <div id="banner">
+            <div id="logo">
+                <img src="img/logo.jpg" alt="Galina Niukhalova logo">
             </div>
 
-            <h2 class="title">Featured Work</h2>
-            <section id="projects">
-                <a class="project" href="https://github.com/galina-niukhalova/Udacity-animal-trading-cards" alt="" target='_blank'>
-                    <div class="project-pic">
-                        <img src="img/animal_trading_cards.jpg" alt="" width="100%">
-                    </div>
-                    <div class="project-name">
-                        Animal Trading Cards
-                    </div>
-                    <div class="project-technologies">
-                        <button class="btn-technology">html</button>
-                        <button class="btn-technology">css</button>
-                    </div>
-                </a>
-                <a class="project" href="http://hideframe.com/" alt="" target='_blank'>
-                    <div class="project-pic">
-                        <img src="img/hideframe.jpg" alt="" width="100%">
-                    </div>
-                    <div class="project-name">
-                        HideFrame.com
-                    </div>
-                    <div class="project-technologies">
-                        <button class="btn-technology">html</button>
-                        <button class="btn-technology">css</button>
-                        <button class="btn-technology">javascript</button>
-                        <button class="btn-technology">webpack</button>
-                    </div>
-                </a>
-                <a class="project" href="https://github.com/galina-niukhalova/goals-tracker" alt="" target='_blank'>
-                    <div class="project-pic">
-                        <img src="img/goalTracker.jpg" alt="" width="100%">
-                    </div>
-                    <div class="project-name">
-                        Goal tracker
-                    </div>
-                    <div class="project-technologies">
-                        <button class="btn-technology">html</button>
-                        <button class="btn-technology">css</button>
-                        <button class="btn-technology">jquery</button>
-                        <button class="btn-technology">electron</button>
-                    </div>
-                </a>
-                <a class="project" href="https://github.com/galina-niukhalova/Udacity-portfolio" alt="" target='_blank'>
-                    <div class="project-pic">
-                        <img src="img/portfolio.jpg" alt="" width="100%">
-                    </div>
-                    <div class="project-name">
-                        Portfolio
-                    </div>
-                    <div class="project-technologies">
-                        <button class="btn-technology">html5</button>
-                        <button class="btn-technology">css</button>
-                    </div>
-                </a>
+            <div id="about">
+                <h1 id="name" class="about-information">Galina Niukhalova</h1>
+                <p id="position" class="about-information">Front-end web developer</p>
+            </div>
+        </header>
+
+        <main id="content">
+            <hr class="separator">
+
+            <div id="banner"></div>
+
+            <section id="work">
+                <h3 class="title">Featured Work</h3>
+                <div id="projects">
+                    <a class="project" href="https://github.com/galina-niukhalova/Udacity-animal-trading-cards" target="_blank">
+                        <div class="project-pic">
+                            <img src="img/projects/animal_trading_cards.jpg" alt="Screenshot of 'Animal tranding cards' project">
+                        </div>
+
+                        <div class="project-name">
+                            Animal Trading Cards
+                        </div>
+
+                        <ul class="project-technologies">
+                            <li class="technology">html</li>
+                            <li class="technology">css</li>
+                        </ul>
+                    </a>
+
+                    <a class="project" href="http://hideframe.com/" target="_blank">
+                        <div class="project-pic">
+                            <img src="img/projects/hideframe.jpg" alt="Screenshot of 'Hideframe.com' project">
+                        </div>
+
+                        <div class="project-name">
+                            HideFrame.com
+                        </div>
+
+                        <ul class="project-technologies">
+                            <li class="technology">html</li>
+                            <li class="technology">css</li>
+                            <li class="technology">javascript</li>
+                            <li class="technology">webpack</li>
+                        </ul>
+                    </a>
+
+                    <a class="project" href="https://github.com/galina-niukhalova/goals-tracker" target="_blank">
+                        <div class="project-pic">
+                            <img src="img/projects/goalTracker.jpg" alt="Screenshot of 'Goal Tracker' project">
+                        </div>
+
+                        <div class="project-name">
+                            Goal tracker
+                        </div>
+
+                        <ul class="project-technologies">
+                            <li class="technology">html</li>
+                            <li class="technology">css</li>
+                            <li class="technology">jquery</li>
+                            <li class="technology">electron</li>
+                        </ul>
+                    </a>
+
+                    <a class="project" href="https://github.com/galina-niukhalova/Udacity-portfolio" target="_blank">
+                        <div class="project-pic">
+                            <img src="img/projects/portfolio.jpg" alt="Screenshot of 'Udacity portfolio' project">
+                        </div>
+
+                        <div class="project-name">
+                            Portfolio
+                        </div>
+
+                        <ul class="project-technologies">
+                            <li class="technology">html5</li>
+                            <li class="technology">css</li>
+                        </ul>
+                    </a>
+                </div>
             </section>
         </main>
-        <footer id="footer">
-            <hr>
-            <section id="contacts">
-                <button class='btn btn-social'>
-                    <a href="https://www.linkedin.com/in/galina-nyukhalova-76707013a/" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                </button>
 
-                <button class='btn btn-social'>
-                    <a href="https://github.com/galina-niukhalova" target="_blank">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </button>
-                <button class='btn btn-social'>
-                    <a href="https://www.facebook.com/galina.njukhalova" target="_blank">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </button>
-            </section>
+        <footer id="footer">
+            <hr class="separator">
+
+            <div id="contacts">
+                <a class="social-icon" href="https://www.linkedin.com/in/galina-nyukhalova-76707013a/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+
+                <a class="social-icon" href="https://github.com/galina-niukhalova" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+
+                <a class="social-icon" href="https://www.facebook.com/galina.njukhalova" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
 
             <div id="copyrights">
-                Photo by 
-                <a href="https://unsplash.com/@jesuskiteque" alt="" target="_blank">Jesus Kiteque</a>
-                on 
-                <a href="https://unsplash.com/" alt="" target="_blank">Unsplash</a>
+                Photo by
+                <a href="https://unsplash.com/@jesuskiteque" target="_blank">Jesus Kiteque</a>
+                on
+                <a href="https://unsplash.com/" target="_blank">Unsplash</a>
             </div>
         </footer>
     </div>
