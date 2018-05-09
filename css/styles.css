@@ -63,12 +63,13 @@
 #projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .project {
     border-radius: 5px;
     box-shadow: 5px 5px 10px #d3d3d3, -5px -5px 10px #d3d3d3;
+    margin-right: 20px;
     margin-bottom: 40px;
 
     text-decoration: none;
