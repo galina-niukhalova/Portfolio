@@ -2,38 +2,139 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Portfolio</title>
 
     <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
     <!-- social icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="vendors/html5-device-mockups/dist/device-mockups.min.css">
 </head>
 
 <body>
     <div class="container">
         <header id="header">
-            <div id="logo">
-                <img src="img/logo.jpg" alt="Galina Niukhalova logo">
+            <div class="banner">
+                <div id="logo">
+                    <img src="img/logo1.jpg" alt="Galina Niukhalova logo">
+                </div>
+                <h1 id="name">
+                    <span>Galina</span>
+                    <span>Niukhalova</span>
+                </h1>
             </div>
-
-            <div id="about">
-                <h1 id="name" class="about-information">Galina Niukhalova</h1>
-                <p id="position" class="about-information">Front-end web developer</p>
-            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/galina-niukhalova-76707013a/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/galina-niukhalova" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.facebook.com/galina.njukhalova" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mailto:galina.hvan1011@gmail.com" target="_blank">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
-
         <main id="content">
-            <hr class="separator">
-
-            <div id="banner"></div>
-
-            <section id="work">
-                <h3 class="title">My projects</h3>
+            <section id="work" class="row">
+                <h2 class="title">My projects</h2>
                 <div id="projects">
-                    <a class="project" href="http://hideframe.com/" target="_blank">
+                    <div class="project">
+                        <div class="project-preview">
+                            <div class="device-wrapper device-imac">
+                                <div class="device" data-device="iMac" data-orientation="portrait" data-color="black">
+                                    <div class="screen screen-ipad">
+                                        <img src="img/projects/hideframe_mac.png" alt="Screenshot of 'Hideframe.com' project">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="device-wrapper device-ipad">
+                                <div class="device" data-device="iPadAir2" data-orientation="landscape" data-color="black">
+                                    <div class="screen screen-ipad">
+                                        <img src="img/projects/hideframe_ipad.jpg" alt="Screenshot of 'Hideframe.com' project">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="device-wrapper device-iphon">
+                                <div class="device" data-device="iPhone7" data-orientation="portrait" data-color="black">
+                                    <div class="screen">
+                                        <img src="img/projects/hideframe_iphone.jpg" alt="Screenshot of 'Hideframe.com' project">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='project-description'>
+                            <h2 class="project-name">HideFrame.com</h2>
+                            <figure class="project-about">
+                                <p class="project-intro">
+                                    <span>HideFrame is a web photo editor for people who sell their car.</span>
+                                    <span>Using its, users can hide a car plate number on pictures simply and quickly.</span>
+                                </p>
+                                <figcaption>
+                                    <div class="project-technology">
+                                        <i class="fab fa-html5"></i>
+                                        <i class="fab fa-css3-alt"></i>
+                                        <i class="fab fa-js"></i>
+                                        <i class="fab fa-sass"></i>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            <a href="http://hideframe.com/" target="_blank" class="btn goto-to-website">Visit a website</a>
+                        </div>
+                    </div>
+
+
+                    <div class="project">
+                        <div class="project-preview">
+                            <div class="device-wrapper device-imac">
+                                <div class="device" data-device="iMac" data-orientation="portrait" data-color="black">
+                                    <div class="screen screen-ipad">
+                                        <img src="img/projects/goal-tracker_mac.png" alt="Screenshot of 'Goal tracker' project">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='project-description'>
+                            <h2 class="project-name">Goal tracker</h2>
+                            <figure class="project-about">
+                                <p class="project-intro">
+                                    <span>Goal tracker is a modified version of TODO.</span>
+                                    <span>By using this website, users can create goals, split them into small subgoals and track
+                                        the status of each item.</span>
+                                </p>
+                                <figcaption>
+                                    <div class="project-technology">
+                                        <i class="fab fa-html5"></i>
+                                        <i class="fab fa-css3-alt"></i>
+                                        <i class="fab fa-js"></i>
+                                        <i class="fab fa-sass"></i>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            <a href="https://galina-niukhalova.github.io/goal-tracker/" target="_blank" class="btn goto-to-website">Visit a website</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <a class="project" href="http://hideframe.com/" target="_blank">
                         <div class="project-pic">
                             <img src="img/projects/hideframe.jpg" alt="Screenshot of 'Hideframe.com' project">
                         </div>
@@ -138,7 +239,7 @@
                         </ul>
                     </a>
                 </div>
-            </section>
+            </section> -->
         </main>
 
         <footer id="footer">
