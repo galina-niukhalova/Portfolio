@@ -3,9 +3,8 @@ $(document).ready(function () {
     /* -------------------------------*/
     /*  for sticky navigation */
     /* ------------------------------- */
-    // console.log($('.social-links'));
     var waypoint = new Waypoint({
-        element: $("#header")[0],
+        element: $("nav")[0],
         handler: function (direction) {
             if (direction == 'down') {
                 $('.social-links').css('opacity', 1);
@@ -13,6 +12,6 @@ $(document).ready(function () {
             else {
                 $('.social-links').css('opacity', 0);
             }
-        }, offset: -$("#header")[0].clientHeight/2
+        }, offset: 110
     });
 });

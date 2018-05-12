@@ -1,0 +1,41 @@
+*, *:after, *:before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* @include respond(tab-land) { // 1rem = 9px
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) { // 1rem = 8px
+        font-size: 50%; 
+    }
+
+    @include respond(big-desktop) { // 1rem = 12px
+        font-size: 75%;
+    } */
+}
+
+body, html {
+    font-family: 'Lato', sans-serif;
+    color: $color-text-main;
+    background-color: $color-background-main;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.row {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+#content {
+    flex-grow: 2;
+}
