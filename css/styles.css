@@ -50,33 +50,6 @@ body, html {
     padding-top: 56rem;
 }
 
-nav {
-    background-color: white;
-}
-
-.nav-list {
-    margin-left: 35rem;
-    list-style: none;
-    padding: 1rem 0;
-
-    display: flex;
-    align-items: center;
-}
-
-.nav-item {
-    font-size: 4rem;
-    display: inline-block;
-}
-
-.nav-item:not(:last-child) {
-    padding-right: 2rem;
-    border-right: .5px solid #eee;
-}
-
-.nav-item:not(:first-child) {
-    padding-left: 2rem;
-}
-
 #logo img {
     width: 25rem;
     box-shadow: 0 0.2rem 0.6rem 0 rgba(0,0,0,.4);
@@ -103,6 +76,104 @@ nav {
     display: block;
 }
 
+/* ---------- */
+/* -- NAVI -- */
+/* ---------- */
+
+nav {
+    background-color: white;
+}
+
+.nav-list {
+    margin-left: 35rem;
+    list-style: none;
+    padding: 2rem 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.nav-item:not(:last-child) {
+    padding-right: 2rem;
+    border-right: .5px solid #eee;
+}
+
+.nav-item:not(:first-child) {
+    padding-left: 2rem;
+}
+
+
+/* ------------------ */
+/* -- Social links -- */
+/* ------------------ */
+
+.social-links {
+    position: fixed;
+    top: 50%;
+    left: 5rem;
+
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity .2s;
+}
+
+.social-links-list {
+    list-style: none;
+}
+
+.social-links-item {
+    font-size: 3.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links-item a:link ,
+.social-links-item a:visited {
+    color: rgba(0,0,0,.4);
+}
+
+.social-icon {
+    transition: all .2s;
+}
+
+.social-links-item a:hover .social-icon,
+.social-links-item a:active .social-icon {
+    transform: scale(1.1);
+}
+
+.social-links-item a:hover .fa-linkedin,
+.social-links-item a:active .fa-linkedin {
+    color: #1178B3;
+}
+
+.social-links-item a:hover .fa-github,
+.social-links-item a:active .fa-github {
+    color: black;
+}
+
+.social-links-item a:hover .fa-facebook,
+.social-links-item a:active .fa-facebook {
+    color: #4468B0;
+}
+
+.social-links-item a:hover .fa-envelope,
+.social-links-item a:active .fa-envelope {
+    color: #679A46;
+}
+
+
 /* Content */
 
 #content {
@@ -125,21 +196,6 @@ nav {
 }
 
 /* social icons */
-
-.social-icon {
-    text-decoration: none;
-    padding: 20px;
-}
-
-.fa {
-    /* padding: 20px 20px; */
-    color: #959da5;
-    font-size: 1.5em !important;
-}
-
-.fa:hover {
-    color: black;
-}
 
 #copyrights {
     text-align: center;
@@ -338,22 +394,6 @@ nav {
 
 .fa-sass {
     color: #CD669A;
-}
-
-.fa-linkedin {
-    color: #1178B3;
-}
-
-.fa-github {
-    color: black;
-}
-
-.fa-facebook {
-    color: #4468B0;
-}
-
-.fa-envelope {
-    color: #DE4A45;
 }
 
 .goto-to-website {
