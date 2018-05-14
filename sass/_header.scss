@@ -5,13 +5,13 @@
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 56rem;
+    padding-top: 42rem;
 }
 
 #logo img {
-    width: 25rem;
+    width: 18rem;
     box-shadow: 0 0.2rem 0.6rem 0 rgba($color-black, .4);
-    border-radius: 5rem;
+    border-radius: 3rem;
     border: 4px solid $color-white;
     position: absolute;
     top: 100%;
@@ -23,10 +23,10 @@
     color: $color-white;
     position: absolute;
     top: 100%;
-    left: 35rem;
+    left: 26rem;
 
     transform: translateY(-110%);
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 300;
 
     & span {

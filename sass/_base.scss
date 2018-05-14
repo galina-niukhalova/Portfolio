@@ -1,28 +1,24 @@
-*, *:after, *:before {
-    padding: 0;
+*,
+*::before,
+*::after {
     margin: 0;
+    padding: 0;
     box-sizing: inherit;
 }
 
+
 html {
+    box-sizing: border-box;
     font-size: 62.5%;
-    /* @include respond(tab-land) { // 1rem = 9px
-        font-size: 56.25%;
-    }
-
-    @include respond(tab-port) { // 1rem = 8px
-        font-size: 50%; 
-    }
-
-    @include respond(big-desktop) { // 1rem = 12px
-        font-size: 75%;
-    } */
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    background-color: $color-background-main;
+    color: $color-text-main;
 }
 
-body, html {
-    font-family: 'Lato', sans-serif;
-    color: $color-text-main;
-    background-color: $color-background-main;
+body {
+    font-size: 1.6rem;
+    box-sizing: border-box; 
 }
 
 .container {
@@ -32,10 +28,39 @@ body, html {
 }
 
 .row {
-    max-width: 140rem;
-    margin: 0 auto;
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #content {
     flex-grow: 2;
+}
+
+section {
+    margin-top: $margin-huge;
+}
+
+
+.section-title {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+
+    &::after {
+        padding-top: 1rem;
+        content: '';
+        display: block;
+        width: 12rem;
+        margin: 0 auto;
+        border-bottom: 2px solid $color-coral;
+    }
+}
+
+// For test
+.section-box {
+    height: 600px;
 }
