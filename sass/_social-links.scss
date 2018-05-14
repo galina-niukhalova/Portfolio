@@ -1,7 +1,7 @@
 .social-links {
     position: fixed;
     top: 50%;
-    left: 5rem;
+    left: 2.5rem;
 
     opacity: 0;
     transform: translateY(-50%);
@@ -12,8 +12,8 @@
     }
 
     &-item {
-        font-size: 3.5rem;
-        padding: 1rem;
+        font-size: 3rem;
+        padding: .5rem;
         display: flex;
         justify-content: center;
 

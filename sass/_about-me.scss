@@ -1,0 +1,141 @@
+.about-me {
+    margin-top: 4rem;
+    padding: 0 5rem;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    &--intro {
+        flex: 0 0 60%;
+    }
+
+    &--skills {
+        flex: 0 0 40%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .fab {
+            font-size: 8rem;
+            border: 2px solid $color-border-light;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: #FAFAFA;
+            transition: all .2s;
+
+            &:hover {
+                z-index: 10;
+            }
+        }
+
+        // html
+        .icon-1 {  
+            width: 14rem;
+            height: 14rem;
+            top: 0; 
+            left: 6rem;
+            z-index: 5;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        
+        // js 
+        .icon-2 {
+            width: 14rem;
+            height: 14rem;
+            top: 11rem;
+            left: 1rem;
+            z-index: 3;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        // css
+        .icon-3 {
+            width: 12rem;
+            height: 12rem;
+            top: 11rem; 
+            left: 100%;
+            transform: translateX(-105%);
+            z-index: 3;
+
+            &:hover {
+                transform: scale(1.1) translateX(-105%);
+            }
+        }
+
+        // sass
+        .icon-4 {
+            width: 12rem;
+            height: 12rem;
+            top: calc(11rem + 8rem); 
+            left: 100%;
+            transform: translateX(-50%);
+
+            &:hover {
+                transform: scale(1.1) translateX(-50%);
+            }
+        }
+
+        // react
+        .icon-5 {
+            width: 10rem;
+            height: 10rem;
+            top: calc(11rem + 9.5rem); 
+            transform: translateX(-50%);
+
+            &:hover {
+                transform: scale(1.1) translateX(-50%);
+            }
+        }
+    }
+
+    &--icons {
+        width: 60%;
+        height: 100%;
+        position: relative;
+    }
+
+    &--text {
+        font-size: 2rem;
+        color: $color-text-3;
+
+        p {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            line-height: 2.4rem;
+            font-weight: 400;
+        }
+    }
+
+    &--link {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-blue;
+        border-bottom: 2px solid transparent;
+        transition: all .2s;
+
+        &:hover,
+        &:active {
+            border-bottom: 2px solid $color-blue;
+        }
+    }
+}
+
+
+.fa {
+    &-html5 { color: $color-html5; }
+    &-css3-alt { color: $color-css; }
+    &-js { color: $color-js; }
+    &-sass { color: $color-scss; }
+    &-react { color: $color-react };
+}
