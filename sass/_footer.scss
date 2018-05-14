@@ -1,0 +1,47 @@
+footer {
+    background-color: $color-background-footer;
+    color: $color-text-4;
+}
+
+#copyrights {
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+.contacts {
+    &-list {
+        padding: 2rem 1rem;
+        text-align: right;
+    }
+
+    &-item {
+        display: inline-block;
+
+        & a:link,
+        & a:visited {
+            color: $color-text-4;
+
+            i {
+                transition: all .2s;
+            }
+        }
+
+        & a:hover,
+        & a:active {
+            color: $color-text-5;
+
+            i {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    &-icon {
+        margin-right: 1rem;
+        font-size: 1.8rem;
+        color: currentColor;
+    }
+}
