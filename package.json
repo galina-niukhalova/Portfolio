@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Galina Niukhalova. Portfolio",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  },
   "devDependencies": {
     "autoprefixer": "^8.4.1",
     "node-sass": "^4.9.0",
