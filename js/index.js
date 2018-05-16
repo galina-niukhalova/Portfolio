@@ -63,12 +63,39 @@ $('.slide-show').on('click', ({ target }) => {
     }
 });
 
+$('.slide-show1').on('click', ({ target }) => {
+    const targetClass = target.getAttribute("class");
+
+    if (targetClass) {
+        if (targetClass.includes('next')) switchSlide1('next');
+        if (targetClass.includes('prev')) switchSlide1('prev');
+    }
+});
+
+$('.slide-show2').on('click', ({ target }) => {
+    const targetClass = target.getAttribute("class");
+
+    if (targetClass) {
+        if (targetClass.includes('next')) switchSlide2('next');
+        if (targetClass.includes('prev')) switchSlide2('prev');
+    }
+});
+
 const elementStrings = {
-    // Slider
+    // Slider, left-right, left
     activeSlide: 'slide--active',
     nextSlide: 'slide--next',
     prevSlide: 'slide--prev',
-    curSlideNum: 'slide-num--active'
+
+    // Slider top-bottom, both
+    activeSlide1: 'slide--active1',
+    nextSlide1: 'slide--next1',
+    prevSlide1: 'slide--prev1',
+
+    // Slider top-bottom, left
+    activeSlide2: 'slide--active2',
+    nextSlide2: 'slide--next2',
+    prevSlide2: 'slide--prev2'
 }
 
 
@@ -90,8 +117,47 @@ const switchSlide = dir => {
     $(imgs[cur]).addClass(elementStrings.activeSlide);
     $(imgs[prev]).addClass(elementStrings.prevSlide);
     $(imgs[next]).addClass(elementStrings.nextSlide);
+}
 
-    $(`.${elementStrings.curSlideNum}`).text(cur+1);
+const switchSlide1 = dir => {
+    const imgs = Array.from($('.slider1').children());
+    const activeSlide = $(`.${elementStrings.activeSlide1}`),
+        nextSlide = $(`.${elementStrings.nextSlide1}`),
+        prevSlide = $(`.${elementStrings.prevSlide1}`);
+
+
+    const { cur, prev, next } = findElementIndex(dir, imgs, imgs.indexOf(activeSlide[0]));
+
+    // Clear
+    activeSlide.removeClass(elementStrings.activeSlide1);
+    nextSlide.removeClass(elementStrings.nextSlide1);
+    prevSlide.removeClass(elementStrings.prevSlide1);
+
+    // Active new
+    $(imgs[cur]).addClass(elementStrings.activeSlide1);
+    $(imgs[prev]).addClass(elementStrings.prevSlide1);
+    $(imgs[next]).addClass(elementStrings.nextSlide1);
+}
+
+
+const switchSlide2 = dir => {
+    const imgs = Array.from($('.slider2').children());
+    const activeSlide = $(`.${elementStrings.activeSlide2}`),
+        nextSlide = $(`.${elementStrings.nextSlide2}`),
+        prevSlide = $(`.${elementStrings.prevSlide2}`);
+
+
+    const { cur, prev, next } = findElementIndex(dir, imgs, imgs.indexOf(activeSlide[0]));
+
+    // Clear
+    activeSlide.removeClass(elementStrings.activeSlide2);
+    nextSlide.removeClass(elementStrings.nextSlide2);
+    prevSlide.removeClass(elementStrings.prevSlide2);
+
+    // Active new
+    $(imgs[cur]).addClass(elementStrings.activeSlide2);
+    $(imgs[prev]).addClass(elementStrings.prevSlide2);
+    $(imgs[next]).addClass(elementStrings.nextSlide2);
 }
 
 const findElementIndex = (dir, imgs, currentIndex) => {
@@ -117,7 +183,7 @@ const findElementIndex = (dir, imgs, currentIndex) => {
             if (currentIndex === imgs.length - 1) {
                 result.cur = 0;
                 result.next = 1;
-            } else if(currentIndex === imgs.length - 2) {
+            } else if (currentIndex === imgs.length - 2) {
                 result.cur = currentIndex + 1;
                 result.next = 0;
             } else {
