@@ -370,53 +370,64 @@ nav {
 
 .slider {
   margin: 0 auto;
-  min-height: 40rem;
-  width: 45%;
+  width: 80%;
+  min-height: 38rem;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden; }
+  background-color: white; }
 
 .slide {
-  width: 100%;
-  height: 0;
-  padding-top: 50rem;
-  background-color: white;
+  width: 80%;
   position: absolute;
   top: 0;
-  transform: translateX(-200%);
-  transition: left ease-out .8s, background .2s; }
-  .slide--active {
-    left: 0;
+  left: 10%;
+  display: flex; }
+  .slide-sertificate {
+    width: 55%;
+    border-right: 2px solid #eee;
+    position: relative;
+    overflow: hidden; }
+    .slide-sertificate img {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transform: translateX(-200%);
+      transition: left ease-out .5s; }
+  .slide-description {
+    width: 48.5%;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .slide-name {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 4rem;
+    opacity: 0; }
+  .slide--active .slide-sertificate img, .slide--prev .slide-sertificate img, .slide--next .slide-sertificate img {
     transform: translateX(0); }
-  .slide--prev {
-    left: -100%;
-    transform: translateX(0); }
-  .slide--next {
-    left: 100%;
-    transform: translateX(0); }
-  .slide-1 {
-    background: url("../img/cources/HTML-and-css3.jpeg"); }
-  .slide-2 {
-    background: url("../img/cources/advanced-css-and-sass.jpeg"); }
-  .slide-3 {
-    background: url("../img/cources/js.jpeg"); }
-  .slide-4 {
-    background: url("../img/cources/modern-react-with-redux.jpeg"); }
-  .slide-1, .slide-2, .slide-3, .slide-4 {
-    background-size: contain;
-    background-repeat: no-repeat; }
+  .slide--active .slide-sertificate img {
+    left: 0; }
+  .slide--active .slide-name {
+    opacity: 1; }
+  .slide--prev .slide-sertificate img {
+    left: 100%; }
+  .slide--next .slide-sertificate img {
+    left: -100%; }
 
 /* --------------------- */
 /* Btns Back and Forward */
 /* --------------------- */
 .slide-btn--prev {
-  left: 24%;
+  left: 5%;
   transform: translate(-100%, -3rem) rotate(180deg); }
   .slide-btn--prev:active {
     transform: translate(-100%, calc(-3rem + 3px)) rotate(180deg); }
 
 .slide-btn--next {
-  left: 78%;
+  left: 95%;
   transform: translate(-100%, -100%); }
   .slide-btn--next:active {
     transform: translate(-100%, calc(-100% + 3px)); }

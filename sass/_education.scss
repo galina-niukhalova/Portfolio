@@ -9,53 +9,73 @@
 
 .slider {
     margin: 0 auto;
-    min-height: 40rem;
-    width: 45%;
-
+    width: 80%;
+    min-height: 38rem;
     box-shadow: 0 3px 5px rgba($color-black, .2);
-
-    position: relative;
-    overflow: hidden;
+    background-color: white;
 }
 
 .slide {
-    width: 100%;
-    height: 0;
-    padding-top: 50rem;
-
-    background-color: white;
+    width: 80%;
 
     position: absolute;
     top: 0;
-    transform: translateX(-200%);
-    transition: left ease-out .8s, background .2s;
+    left: 10%;
+
+    display: flex;
+
+    &-sertificate {
+        width: 55%;
+        border-right: 2px solid $color-border-light;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: auto;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-200%);
+            transition: left ease-out .5s;
+        }
+    }
+
+    &-description {
+        width: 48.5%;
+        height: 38rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-name {
+        margin-top: 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: Roboto, sans-serif;
+        margin-bottom: 4rem;
+        opacity: 0;
+        // transition: opacity .2s ease-out;
+    }
+
+    &--active,
+    &--prev,
+    &--next {
+        & .slide-sertificate img { transform: translateX(0); }
+    }
 
     &--active {
-        left: 0;
-        transform: translateX(0);
+        & .slide-sertificate img { left: 0; }
+        & .slide-name { opacity: 1; }
     }
 
     &--prev {
-        left: -100%;
-        transform: translateX(0);
+        & .slide-sertificate img { left: 100%; }
     }
 
     &--next {
-        left: 100%;
-        transform: translateX(0);
-    }
-
-    &-1 { background: url('../img/cources/HTML-and-css3.jpeg'); }
-    &-2 { background: url('../img/cources/advanced-css-and-sass.jpeg'); }
-    &-3 { background: url('../img/cources/js.jpeg'); }
-    &-4 { background: url('../img/cources/modern-react-with-redux.jpeg'); }
-
-    &-1,
-    &-2,
-    &-3,
-    &-4 {
-        background-size: contain;
-        background-repeat: no-repeat;
+        & .slide-sertificate img { left: -100%; }
     }
 }
 
@@ -65,7 +85,7 @@
 /* --------------------- */
 .slide-btn {
     &--prev {
-        left: 24%;
+        left: 5%;
         transform: translate(-100%, -3rem) rotate(180deg);
 
         &:active {
@@ -75,7 +95,7 @@
 
 
     &--next {
-        left: 78%;
+        left: 95%;
         transform: translate(-100%, -100%);
 
         &:active {
@@ -123,10 +143,6 @@
         font-weight: 400;
         text-decoration: none;
         color: #333;
-        // background-color: $color-blue;
-        // box-shadow: 0 5px 5px rgba($color-black, .3);
-        // border-radius: 5px;
-        // color: $color-blue;
         border-bottom: 2px solid $color-blue;
         transition: transform .2s;
     }
