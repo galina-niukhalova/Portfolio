@@ -360,74 +360,105 @@ nav {
 .screen img {
   width: 100%; }
 
+/* ------------ */
+/* -- Slider -- */
+/* ------------ */
 .slide-show {
   margin-top: 4rem;
-  margin-bottom: 6rem; }
-  .slide-show--btns {
-    margin-top: 3rem;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center; }
-  .slide-show--prev {
-    transform: rotate(180deg); }
-    .slide-show--prev:active {
-      transform: rotate(180deg) translateY(-3px); }
-  .slide-show--next:active {
-    transform: translateY(3px); }
-  .slide-show--prev, .slide-show--next {
-    width: 3rem;
-    height: 3rem;
-    fill: #333;
-    transition: fill .2s, transform .2s; }
-    .slide-show--prev:hover, .slide-show--next:hover {
-      fill: #3792cc; }
-  .slide-show--nums {
-    min-width: 12rem;
-    font-size: 3rem;
-    position: relative; }
-
-.slide-num {
-  position: absolute;
-  top: 50%; }
-  .slide-num--active {
-    left: calc(50% - 1.5rem);
-    transform: translate(-50%, -60%); }
-  .slide-num--total {
-    left: calc(50% + 1.5rem);
-    transform: translate(-50%, -40%); }
-
-.slide-num--divider {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  margin-bottom: 6rem;
+  position: relative; }
 
 .slider {
   margin: 0 auto;
-  min-height: 44.7rem;
-  width: 50%;
-  background-color: #fff;
+  min-height: 40rem;
+  width: 45%;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden; }
 
 .slide {
-  margin: 0 auto;
   width: 100%;
-  height: auto;
-  opacity: 0;
+  height: 0;
+  padding-top: 50rem;
+  background-color: white;
   position: absolute;
   top: 0;
-  left: 0;
-  transition: opacity ease-out 0.7s, transform ease-out 0.7s; }
+  transform: translateX(-200%);
+  transition: left ease-out .8s, background .2s; }
   .slide--active {
-    opacity: 1 !important; }
+    left: 0;
+    transform: translateX(0); }
   .slide--prev {
-    transform: translateX(100%); }
+    left: -100%;
+    transform: translateX(0); }
   .slide--next {
-    transform: translateX(-100%); }
+    left: 100%;
+    transform: translateX(0); }
+  .slide-1 {
+    background: url("../img/cources/HTML-and-css3.jpeg"); }
+  .slide-2 {
+    background: url("../img/cources/advanced-css-and-sass.jpeg"); }
+  .slide-3 {
+    background: url("../img/cources/js.jpeg"); }
+  .slide-4 {
+    background: url("../img/cources/modern-react-with-redux.jpeg"); }
+  .slide-1, .slide-2, .slide-3, .slide-4 {
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+/* --------------------- */
+/* Btns Back and Forward */
+/* --------------------- */
+.slide-btn--prev {
+  left: 24%;
+  transform: translate(-100%, -3rem) rotate(180deg); }
+  .slide-btn--prev:active {
+    transform: translate(-100%, calc(-3rem + 3px)) rotate(180deg); }
+
+.slide-btn--next {
+  left: 78%;
+  transform: translate(-100%, -100%); }
+  .slide-btn--next:active {
+    transform: translate(-100%, calc(-100% + 3px)); }
+
+.slide-btn--prev, .slide-btn--next {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  fill: #333;
+  transition: fill .2s, transform .2s; }
+  .slide-btn--prev:hover, .slide-btn--next:hover {
+    fill: #3792cc; }
+
+/* --------------- */
+/* Btn Source code */
+/* --------------- */
+.slider-btn {
+  width: 45%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(calc(-50%), 1.5rem);
+  height: auto;
+  display: flex;
+  justify-content: flex-end; }
+  .slider-btn a:link,
+  .slider-btn a:visited {
+    padding: .5rem 0;
+    width: max-content;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 2px solid #3792cc;
+    transition: transform .2s; }
+  .slider-btn:active {
+    transform: translateY(3px); }
 
 footer {
+  margin-top: 8rem;
   background-color: #333;
   color: #aaa; }
 
