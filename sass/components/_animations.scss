@@ -1,0 +1,59 @@
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .animated_fadeIn1, 
+  .animated_fadeIn2 {
+      opacity: 0;
+  }
+  
+  .fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+
+/*  ------------------------------------  */
+/*  Animation: slider from left to right  
+/*  Structure:                                     
+   .animated_lr .animated_slide--cur { .slide-wrapper { .animated_obj } 
+   .animated_lr .animated_slide--cur { .slide-wrapper { .animated_obj } 
+   .animated_lr .animated_slide--cur { .slide-wrapper { .animated_obj } 
+/*  ------------------------------------  */
+.animated_lr  {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    // img
+    & .animated_obj {
+        position: absolute;
+        top: 0;
+        transform: translateX(-200%);
+        transition: left ease-out .5s;
+    }
+
+    & .slide-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &.animated_slide { 
+        &--cur, &--next, &--prev {
+            & .animated_obj { transform: translateX(0); } 
+        }    
+
+        &--cur .animated_obj { left: 0; }
+        &--prev .animated_obj { left: 100%; }
+        &--next .animated_obj { left: -100%; }
+    }
+}

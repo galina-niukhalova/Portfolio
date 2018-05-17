@@ -1,0 +1,33 @@
+/* ---------------------------- 
+     Back and Forward btns < > 
+   ---------------------------- */
+$btn-angle--size: 3rem;
+
+.btn-angle {
+    &--left {
+        transform: translate(-100%, -$btn-angle--size) rotate(180deg);
+        &:active { 
+            transform: translate(-100%, calc(-3rem + 3px)) rotate(180deg);
+        }
+    }
+
+
+    &--right {
+        transform: translate(-100%, -100%);
+        &:active { transform: translate(-100%, calc(-100% + 3px));}
+    }
+
+    &--left,
+    &--right {
+        position: absolute;
+        top: 50%; 
+        
+        width: $btn-angle--size;
+        height: $btn-angle--size;
+        fill: $color-text-main;
+        transition: fill .2s, transform .2s;
+
+        &:hover { fill: $color-blue; }
+        cursor: pointer;
+    }
+}

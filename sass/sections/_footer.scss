@@ -1,0 +1,36 @@
+footer {
+    margin-top: 8rem;
+    background-color: $color-background-footer;
+    color: $color-text-4;
+}
+
+#copyrights {
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+.contacts {
+    &-list {
+        padding: 2rem 1rem;
+        text-align: right;
+    }
+
+    &-item {
+        display: inline-block;
+        i { margin-right: $margin-tiny; }
+    }
+}
+
+.social-link {
+    &:link,
+    &:visited {
+        color: $color-text-4;
+    }
+
+    &:hover,
+    &:active {
+        & .social-icon--tiny { color: $color-text-5; }
+    }
+}

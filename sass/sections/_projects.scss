@@ -1,14 +1,9 @@
 #projects {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: $margin-big;
     padding: 0 5rem;
 }
 
-.projects-wrap {
-    display: flex;
-    flex: 0 0 75%;
-    flex-direction: column;
-}
 
 .project {
     width: 100%;
@@ -22,7 +17,7 @@
             width: 12rem;
             content: '';
             display: block;
-            border-bottom: 2px solid $color-border-light;
+            border-bottom: 2px solid $color-grey-light;
             margin: 0 auto;
             padding-top: 6rem;
         }
@@ -34,18 +29,17 @@
     }
 
     &-description {
-        flex: 1 0 40%;
+        flex: 1 0 calc(40% - 3rem);
+        margin: auto 0;
+        margin-left: 3rem;
+        padding: 0 4rem;
 
         display: flex; 
-        justify-content: flex-end;
-        align-content: flex-end;
+        flex-direction: column;
     }
 
     &-name {
-        margin-bottom: 4rem;
-        font-size: 2rem;
-        align-self: flex-start;
-        font-weight: 700;
+        margin-bottom: $margin-small;
     }
 
     &-about {
@@ -54,22 +48,27 @@
     }
 
     &-intro {
-        color: $color-text-2;
+        color: $color-text-3;
         font-size: 1.6rem;
         padding-bottom: 2rem;
 
         & span:not(:last-child) {
             display: block;
         }
+
+        border-bottom: .5px solid $color-grey-light;
     }
 
     &-technology {
         padding-top: 1rem;
-        border-top: .5px solid $color-border-light;
         font-size: 1.4rem;
 
         span {
-            margin-right: .5rem;
+            display: inline-block;
+            padding: 0 3px;
+            color: #666;
+            margin-right: .3rem;
+            margin-bottom: .3rem;
         }
     }
 }
@@ -100,20 +99,22 @@
     }
 }
 
-.goto-to-website:link, 
-.goto-to-website:visited {
+.goto-to-website, 
+.goto-to-website {
 
     &:link, 
     &:visited {
         margin-top: 4rem;
-        padding: 1.5rem 3rem;
-        
-        display: block;
+        padding: 1rem 2rem;
+
         align-self: flex-start;
-        background-color: $color-blue;
-        color: $color-white;
-        font-size: 1.6rem;
-        box-shadow: 0 0.2rem 0.6rem 0 rgba($color-black, .4);
+        display: block;
+
+        background-color: transparent;
+        color: $color-blue;
+        font-size: 1.4rem;
+        font-weight: 600;
+        border: 2px solid $color-blue;
         border-radius: 5px;
         text-decoration: none;
         transition: all .2s;
@@ -121,9 +122,14 @@
 
     &:hover,
     &:active {
-        background-color: $color-blue-2;
+        color: $color-white;
+        background-color: $color-blue;
+        border: 2px solid $color-blue;
     }
 
+    &:active {
+        transform: translateY(3px);
+    }
 }
 
 .screen img {

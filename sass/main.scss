@@ -1,13 +1,13 @@
 @import "variables";
-@import "animations";
 @import "base";
 
-@import "header";
-@import "navi";
-@import "social-links";
-@import "about-me";
-@import "projects";
-@import "education_an-lr-left";
-@import "education_an-tb-both";
-@import "education_an-tb-left";
-@import "footer";
+@import "components/animations";
+@import "components/social-links";
+@import "components/btns";
+@import "components/navi";
+
+@import "sections/header";
+@import "sections/about-me";
+@import "sections/projects";
+@import "sections/education";
+@import "sections/footer";
