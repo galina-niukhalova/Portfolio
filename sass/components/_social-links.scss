@@ -1,0 +1,47 @@
+.social-link {
+
+    &:link,
+    &:visited {
+        color: rgba($color-black, .4);
+    }
+
+    &:hover,
+    &:active {
+        cursor: pointer;
+        i { transform: scale(1.1); }
+            
+        & .fa-linkedin { color: $color-linkedin; }
+        & .fa-github { color: $color-github; }
+        & .fa-facebook { color: $color-facebook; }
+        & .fa-envelope { color: $color-mail; }  
+    }
+}
+
+
+.social-icon {
+    transition: transform .2s, color .2s;
+
+    &--big { font-size: 3rem; }
+    &--small { font-size: 2rem; }
+    &--tiny { font-size: 1.8rem; }
+}
+
+.social-links {
+    position: fixed;
+    top: 50%;
+    left: 2.5rem;
+
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity .2s;
+
+    &-list {
+        list-style: none;
+    }
+
+    &-item {
+        padding: .8rem;
+        display: flex;
+        justify-content: center;
+    }
+}

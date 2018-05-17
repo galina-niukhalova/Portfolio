@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Portfolio</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/animate.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto:100,300,300i,400,400i" rel="stylesheet">
+
+    <!-- social icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="vendors/html5-device-mockups/dist/device-mockups.min.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="banner">
+            <div id="logo">
+                <img src="img/logo1.jpg" alt="Galina Niukhalova logo">
+            </div>
+            <h1 id="name">
+                <span>Galina</span>
+                <span>Niukhalova</span>
+            </h1>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#about-me">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#work">My work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education">Education</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <!-- About me -->
+        <section id="about-me">
+            <h2 class="section-title">About me</h2>
+            <div class="row about-me">
+                <div class="about-me--intro">
+                    <span class="about-me--text">
+                        <p>Hi, I'm Galina. Nice to meet you.</p>
+                        <p>Let me introduce myself.</p>
+                        <p>I'm a frontend developer, currently based in Bangkok, Thailand. 5 years ago I graduated a technical
+                            university in my home city Novosibirsk, Russia. Since this time, I've worked in different IT
+                            fields: support, development, quality assurance. You can get more information about my work experience
+                            in my
+                            <a class="about-me--link" target="_blank" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/">LinkedIn profile</a>.
+                        </p>
+                        <p>I started my frontend journey a year ago. During this time, I focused on studying and building foundations
+                            to become a good frontend developer. Some of my educational projects you can find
+                            <a class="about-me--link" href="#">here</a>. At the same time, I was working on my own website. Read about this product
+                            <a href="#project-hideframe" class="about-me--link">below.</a>
+                        </p>
+                        <p>Currently, I'm looking for a new opportunity. If you are intrested in me, I’d love to hear from you.
+                        </p>
+                    </span>
+                </div>
+                <div class="about-me--skills">
+                    <i class="fab fa-html5 skills-icon skills-icon--1"></i>
+                    <i class="fab fa-js skills-icon skills-icon--2"></i>
+                    <i class="fab fa-css3-alt skills-icon skills-icon--3"></i>
+                    <i class="fab fa-sass skills-icon skills-icon--4"></i>
+                    <i class="fab fa-react skills-icon skills-icon--5"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- My projects -->
+        <section id="work" class="row">
+            <h2 class="section-title">My work</h2>
+            <div id="projects">
+                <div class="project" id="project-hideframe">
+                    <div class="project-preview animated_fadeIn1">
+                        <div class="device-wrapper device-imac">
+                            <div class="device" data-device="iMac" data-orientation="portrait" data-color="black">
+                                <div class="screen screen-ipad">
+                                    <img src="img/projects/hideframe_mac.png" alt="Screenshot of 'Hideframe.com' project">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="device-wrapper device-ipad">
+                            <div class="device" data-device="iPadAir2" data-orientation="landscape" data-color="black">
+                                <div class="screen screen-ipad">
+                                    <img src="img/projects/hideframe_ipad.jpg" alt="Screenshot of 'Hideframe.com' project">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="device-wrapper device-iphone">
+                            <div class="device" data-device="iPhone7" data-orientation="portrait" data-color="black">
+                                <div class="screen">
+                                    <img src="img/projects/hideframe_iphone.jpg" alt="Screenshot of 'Hideframe.com' project">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='project-description'>
+                        <h3 class="project-name">HideFrame.com</h3>
+                        <figure class="project-about">
+                            <p class="project-intro">
+                                <span>HideFrame is a web photo editor for people who sell their car.</span>
+                                <span>Using its, users can hide a car plate number on pictures simply and quickly.</span>
+                            </p>
+                            <figcaption>
+                                <div class="project-technology">
+                                    <span>#html</span>
+                                    <span>#css</span>
+                                    <span>#sass</span>
+                                    <span>#js</span>
+                                    <span>#es6</span>
+                                    <span>#jquery</span>
+                                    <span>#webpack</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <a href="http://hideframe.com/" target="_blank" class="btn goto-to-website">Visit a website</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-preview animated_fadeIn2">
+                        <div class="device-wrapper device-imac">
+                            <div class="device" data-device="iMac" data-orientation="portrait" data-color="black">
+                                <div class="screen screen-ipad">
+                                    <img src="img/projects/goal-tracker_mac.png" alt="Screenshot of 'Goal tracker' project">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='project-description'>
+                        <h3 class="project-name">Goal tracker</h3>
+                        <figure class="project-about">
+                            <p class="project-intro">
+                                <span>Goal tracker is a modified version of TODO.</span>
+                                <span>By using this website, users can create goals, split them into small subgoals and track the
+                                    status of each item.</span>
+                            </p>
+                            <figcaption>
+                                <div class="project-technology">
+                                    <span>#html</span>
+                                    <span>#css</span>
+                                    <span>#sass</span>
+                                    <span>#js</span>
+                                    <span>#es6</span>
+                                    <span>#webpack</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <a href="https://galina-niukhalova.github.io/goal-tracker/" target="_blank" class="btn goto-to-website">Visit a website</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education"></section>
+        <h2 class="section-title">Some of my completed courses</h2>
+        <div class="slide-show js__slide-show row">
+            <div class="slider">
+                <div class="slide animated_lr animated_slide--cur">
+                    <div class="slide-sertificate slide-wrapper">
+                        <img class="animated_obj" src="./img/cources/HTML-and-css3.jpeg" alt="HTML5 and CSS3.">
+                    </div>
+                    <div class="slide-description">
+                        <h3 class="slide-name">HTML5 and CSS3</h3>
+                        <h4>What I discovered through this course:</h4>
+                        <ul class="slide-topics-list">
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">How to build a static website using HTML5 and CSS3.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">How to build a responsive website which looks good on different devices.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">How to optimize a website speed.</span>
+                            </li>
+                        </ul>
+                        <div class="slide-links">
+                            <a class="social-link" href="https://github.com/galina-niukhalova/udemy-html5-and-css3-course" target='_blank'>
+                                <i class="fab fa-github social-icon social-icon--small"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide animated_lr animated_slide--next">
+                    <div class="slide-sertificate slide-wrapper">
+                        <img class="animated_obj" src="./img/cources/advanced-css-and-sass.jpeg" alt="Advanced CSS and Sass.">
+                    </div>
+                    <div class="slide-description">
+                        <h3 class="slide-name">Advanced CSS and Sass</h3>
+                        <h4>What I discovered through this course:</h4>
+                        <ul class="slide-topics-list">
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">How to add an animation on a website.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">How to use Flexbox and CSS Grid.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">How to use a css preprocessor Sass.</span>
+                            </li>
+                        </ul>
+                        <div class="slide-links">
+                            <a class="social-link" href="https://github.com/galina-niukhalova/udemy-advanced-css-and-sass" target='_blank'>
+                                <i class="fab fa-github social-icon social-icon--small"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide animated_lr">
+                    <div class="slide-sertificate slide-wrapper">
+                        <img class="animated_obj" src="./img/cources/js.jpeg" alt="The complete JavaScript course.">
+                    </div>
+                    <div class="slide-description">
+                        <h3 class="slide-name">JS / ES6</h3>
+                        <h4>What I discovered through this course:</h4>
+                        <ul class="slide-topics-list">
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">Fundamental JS concepts.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">New features of ES6.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">What is asynchronous JS and how to make AJAX request.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">What is MVC pattern and how to use it in a project.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">How to use Webpack and Babel.</span>
+                            </li>
+                        </ul>
+                        <div class="slide-links">
+                            <a class="social-link" href="https://github.com/galina-niukhalova/udemy-javaScript" target='_blank'>
+                                <i class="fab fa-github social-icon social-icon--small"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="slide animated_lr animated_slide--prev">
+                    <div class="slide-sertificate slide-wrapper">
+                        <img class="animated_obj" src="./img/cources/modern-react-with-redux.jpeg" alt="Modern React with Redux.">
+                    </div>
+                    <div class="slide-description">
+                        <h3 class="slide-name">React with Redux</h3>
+                        <h4>What I discovered through this course:</h4>
+                        <ul class="slide-topics-list">
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">What is JSX and how to use it.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">How to build components using React.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">How to centralize an app state using Redux.</span>
+                            </li>
+                            <li class="slide-topic--item">
+                                <span class="slide-topic--mark">*</span>
+                                <span class="slide-topic--text">What is a middleware and how to use it.</span>
+                            </li>
+                        </ul>
+                        <div class="slide-links">
+                            <a class="social-link" href="https://github.com/galina-niukhalova/udemy-modern-react-with-redux" target='_blank'>
+                                <i class="fab fa-github social-icon social-icon--small"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <svg class="btn-angle--left js__slide-btn--prev" viewBox="0 0 14 28">
+                <path fillrule="evenodd" d="M 13.44 14.58C 13.44 14.58 1.65 27.07 1.65 27.07 1.34 27.39 0.85 27.39 0.54 27.07 0.24 26.75 0.24 26.22 0.54 25.9 0.54 25.9 11.78 14 11.78 14 11.78 14 0.54 2.1 0.54 2.1 0.24 1.77 0.24 1.25 0.54 0.93 0.85 0.6 1.34 0.6 1.65 0.93 1.65 0.93 13.44 13.41 13.44 13.41 13.74 13.74 13.74 14.26 13.44 14.58Z"></path>
+            </svg>
+            <svg class="btn-angle--right js__slide-btn--next" viewBox="0 0 14 28">
+                <path fillrule="evenodd" d="M 13.44 14.58C 13.44 14.58 1.65 27.07 1.65 27.07 1.34 27.39 0.85 27.39 0.54 27.07 0.24 26.75 0.24 26.22 0.54 25.9 0.54 25.9 11.78 14 11.78 14 11.78 14 0.54 2.1 0.54 2.1 0.24 1.77 0.24 1.25 0.54 0.93 0.85 0.6 1.34 0.6 1.65 0.93 1.65 0.93 13.44 13.41 13.44 13.41 13.74 13.74 13.74 14.26 13.44 14.58Z"></path>
+            </svg>
+        </div>
+        </section>
+
+        <div class='social-links'>
+            <ul class="social-links-list">
+                <li class="social-links-item">
+                    <a class="social-link" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/" target="_blank">
+                        <i class="fab fa-linkedin social-icon social-icon--big"></i>
+                    </a>
+                </li>
+                <li class="social-links-item">
+                    <a class="social-link" href="https://github.com/galina-niukhalova" target="_blank">
+                        <i class="fab fa-github social-icon social-icon--big"></i>
+                    </a>
+                </li>
+                <li class="social-links-item">
+                    <a class="social-link" href="https://www.facebook.com/galina.njukhalova" target="_blank">
+                        <i class="fab fa-facebook social-icon social-icon--big"></i>
+                    </a>
+                </li>
+                <li class="social-links-item">
+                    <a class="social-link" href="mailto:galina.hvan1011@gmail.com">
+                        <i class="far fa-envelope social-icon social-icon--big"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="contacts row">
+            <ul class="contacts-list">
+                <li class="contacts-item">
+                    <a class="social-link" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/" target="_blank">
+                        <i class="fab fa-linkedin social-icon social-icon--tiny"></i>
+                    </a>
+                </li>
+                <li class="contacts-item">
+                    <a class="social-link" href="https://github.com/galina-niukhalova" target="_blank">
+                        <i class="fab fa-github social-icon social-icon--tiny"></i>
+                    </a>
+                </li>
+                <li class="contacts-item">
+                    <a class="social-link" href="https://www.facebook.com/galina.njukhalova" target="_blank">
+                        <i class="fab fa-facebook social-icon social-icon--tiny"></i>
+                    </a>
+                </li>
+                <li class="contacts-item">
+                    <a class="social-link" href="mailto:galina.hvan1011@gmail.com" target="_blank">
+                        <i class="far fa-envelope social-icon social-icon--tiny"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="copyrights">
+            © 2018 Galina Niukhalova. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./vendors/noframework.waypoints.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

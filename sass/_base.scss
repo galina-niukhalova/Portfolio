@@ -6,6 +6,10 @@
     box-sizing: inherit;
 }
 
+*::selection {
+    background-color: $color-grey-light;
+}
+
 
 html {
     box-sizing: border-box;
@@ -33,13 +37,9 @@ body {
     margin-right: auto;
 }
 
-#content {
-    flex-grow: 2;
-}
-
-section {
-    margin-top: $margin-huge;
-}
+#content { flex-grow: 2; }
+section { margin-top: $margin-huge; }
+section:last-child { margin-bottom: $margin-huge; }
 
 
 .section-title {
@@ -60,7 +60,13 @@ section {
     }
 }
 
-// For test
-.section-box {
-    height: 600px;
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-coral2;
+}
+
+h4 {
+    font-size: 1.8rem;
+    font-weight: 400;
 }

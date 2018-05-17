@@ -1,0 +1,101 @@
+.about-me {
+    margin-top: $margin-big;
+    padding: 0 5rem;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    &--intro {
+        flex: 0 0 60%;
+    }
+
+    &--skills {
+        flex: 0 0 40%;
+        position: relative;
+    }
+
+    &--text {
+        color: $color-text-3;
+        line-height: 2.4rem;
+
+        p:not(:last-child) { margin-bottom: 2rem; }
+    }
+
+    &--link {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-blue;
+        border-bottom: $border-thick-transparent;
+        transition: all .2s;
+
+        &:hover,
+        &:active {
+            border-bottom: $border-thick-blue;
+        }
+    }
+}
+
+.skills-icon {
+    font-size: 8rem;
+    border: $border-thick;
+    box-shadow: $box-shadow-1;
+    border-radius: 50%;
+    background-color: $color-background-main;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+    transform: translateX(-50%);
+    transition: all .2s;
+
+    &:hover {
+        z-index: 10;
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    &--1 { 
+        color: $color-html5; 
+        width: 14rem;
+        height: 14rem;
+        top: -2rem; 
+        left: 60%;
+        z-index: 5;
+    }
+
+    &--2 { 
+        color: $color-js; 
+        width: 14rem;
+        height: 14rem;
+        top: 9rem;
+        left: 47%;
+        z-index: 3;
+    }
+
+    &--3 { 
+        color: $color-css; 
+        width: 12rem;
+        height: 12rem;
+        top: 9rem; 
+        left: 75%;
+        z-index: 3;
+    }
+
+    &--4 { 
+        color: $color-scss; 
+        width: 12rem;
+        height: 12rem;
+        top: 17rem; 
+        left: 91%;
+    }
+
+    &--5 { 
+        color: $color-react;
+        width: 10rem;
+        height: 10rem;
+        top: 19.5rem; 
+        left: 31%;
+    }
+}

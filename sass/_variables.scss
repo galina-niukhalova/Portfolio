@@ -2,7 +2,7 @@ $color-white: #fff;
 $color-black: #000;
 
 // Text
-$color-text-main : #333;
+$color-text-main: #333;
 $color-text-2: #777;
 $color-text-3: #555;
 $color-text-4: #aaa;
@@ -15,11 +15,12 @@ $color-background-main: #FAFAFA;
 $color-background-footer: #333;
 
 // Borders
-$color-border-light: #eee;
+$color-grey-light: #eee;
 
 // Headers
 $color-green: #5AA995;
 $color-coral: #EDABA3;
+$color-coral2: #dc5d4e;
 
 // social icons
 $color-linkedin: #1178B3;
@@ -34,4 +35,25 @@ $color-react: #67DAF9;
 
 
 // margins
-$margin-huge: 8rem;
+$margin-huge: 10rem;
+$margin-big: 6rem;
+
+// section - content
+$margin-normal: 4rem;
+$margin-small: 3rem;
+$margin-smallest: 2rem;
+$margin-tiny: 1rem;
+
+
+// box-shadow
+$box-shadow-1: 0 3px 5px rgba($color-black, .2);
+
+
+// borders
+$border-thick: 2px solid $color-grey-light;
+$border-thick-transparent: 2px solid transparent;
+$border-thick-blue: 2px solid $color-blue;
+
+$border-normal: 1px solid $color-grey-light;
+$border-thin: .5px solid $color-grey-light;
+
