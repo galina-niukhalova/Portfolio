@@ -151,14 +151,14 @@ h4 {
      Back and Forward btns < > 
    ---------------------------- */
 .btn-angle--left {
-  transform: translate(-100%, -3rem) rotate(180deg); }
+  transform: translate(0, -50%) rotate(180deg); }
   .btn-angle--left:active {
-    transform: translate(-100%, calc(-3rem + 3px)) rotate(180deg); }
+    transform: translate(0, calc(-50% + 3px)) rotate(180deg); }
 
 .btn-angle--right {
-  transform: translate(-100%, -100%); }
+  transform: translate(-100%, -50%); }
   .btn-angle--right:active {
-    transform: translate(-100%, calc(-100% + 3px)); }
+    transform: translate(-100%, calc(-50% + 3px)); }
 
 .btn-angle--left, .btn-angle--right {
   position: absolute;
@@ -329,9 +329,9 @@ nav {
     flex: 1 0 60%;
     position: relative; }
   .project-description {
-    flex: 1 0 calc(40% - 3rem);
+    flex: 1 0 calc(40% - 5rem);
     margin: auto 0;
-    margin-left: 3rem;
+    margin-left: 5rem;
     padding: 0 4rem;
     display: flex;
     flex-direction: column; }
@@ -346,6 +346,7 @@ nav {
     padding-bottom: 2rem;
     border-bottom: 0.5px solid #eee; }
     .project-intro span:not(:last-child) {
+      margin-bottom: .5rem;
       display: block; }
   .project-technology {
     padding-top: 1rem;

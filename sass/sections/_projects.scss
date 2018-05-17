@@ -29,9 +29,9 @@
     }
 
     &-description {
-        flex: 1 0 calc(40% - 3rem);
+        flex: 1 0 calc(40% - 5rem);
         margin: auto 0;
-        margin-left: 3rem;
+        margin-left: 5rem;
         padding: 0 4rem;
 
         display: flex; 
@@ -53,6 +53,7 @@
         padding-bottom: 2rem;
 
         & span:not(:last-child) {
+            margin-bottom: .5rem;
             display: block;
         }
 
