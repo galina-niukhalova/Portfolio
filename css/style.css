@@ -343,7 +343,7 @@ nav {
   .project-intro {
     color: #555;
     font-size: 1.6rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     border-bottom: 0.5px solid #eee; }
     .project-intro span:not(:last-child) {
       margin-bottom: .5rem;
