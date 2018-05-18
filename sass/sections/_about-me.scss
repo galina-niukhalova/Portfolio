@@ -75,15 +75,20 @@
         color: $color-html5; 
         width: 14rem;
         height: 14rem;
-        top: -2rem; 
-        left: 60%;
+        top: -2.5rem; 
+        left: 63%;
         z-index: 5;
         transform: translateX(-50%);
 
+        @include respond(tab-land-1200) { 
+            left: 60%;
+        }
+
         @include respond(tab-land-1024) { 
+
             width: 13rem;
             height: 13rem;
-            left: 50%;
+            left: 54%;
         }
     }
 
@@ -92,10 +97,14 @@
         color: $color-js; 
         width: 14rem;
         height: 14rem;
-        top: 9rem;
+        top: 8.5rem;
         left: 48%;
         z-index: 3;
         transform: translateX(-50%);
+
+        @include respond(tab-land-1200) { 
+            left: 45%;
+        }
 
         @include respond(tab-land-1024) { 
             width: 13rem;
@@ -111,17 +120,21 @@
         color: $color-css; 
         width: 12rem;
         height: 12rem;
-        top: 9rem; 
-        left: 75%;
+        top: 9.5rem; 
+        left: 76%;
         z-index: 3;
         transform: translateX(-50%);
+
+        @include respond(tab-land-1200) { 
+            left: 73.5%;
+        }
 
         @include respond(tab-land-1024) { 
             width: 11rem;
             height: 11rem;
 
             top: 8.5rem;
-            left: 66%;
+            left: 69%;
         }
     }
 
@@ -130,16 +143,20 @@
         color: $color-scss; 
         width: 12rem;
         height: 12rem;
-        top: 17rem; 
-        left: 91%;
+        top: 18.5rem; 
+        left: 93%;
         transform: translateX(-50%);
+
+        @include respond(tab-land-1200) { 
+            left: 90%;
+        }
 
         @include respond(tab-land-1024) { 
             width: 11rem;
             height: 11rem;
 
-            top: 16.5rem;
-            left: 83%;
+            top: 17rem;
+            left: 87%;
         }
     }
 
@@ -148,16 +165,20 @@
         color: $color-react;
         width: 10rem;
         height: 10rem;
-        top: 19.5rem; 
-        left: 31%;
+        top: 19rem; 
+        left: 30%;
         transform: translateX(-50%);
         
+        @include respond(tab-land-1200) { 
+            left: 27%;
+        }
+
         @include respond(tab-land-1024) { 
             width: 9rem;
             height: 9rem;
 
-            top: 17.5rem;
-            left: 20%;
+            top: 18rem;
+            left: 19%;
         }
     }
 }

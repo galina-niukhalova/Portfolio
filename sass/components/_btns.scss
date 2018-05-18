@@ -5,16 +5,16 @@ $btn-angle--size: 3rem;
 
 .btn-angle {
     &--left {
-        transform: translate(0, -50%) rotate(180deg);
+        transform: translate(-50%, -50%) rotate(180deg);
         &:active { 
-            transform: translate(0, calc(-50% + 3px)) rotate(180deg);
+            transform: translate(-50%, calc(-50% + 3px)) rotate(180deg);
         }
     }
 
 
     &--right {
-        transform: translate(-100%, -50%);
-        &:active { transform: translate(-100%, calc(-50% + 3px));}
+        transform: translate(-50%, -50%);
+        &:active { transform: translate(-50%, calc(-50% + 3px));}
     }
 
     &--left,

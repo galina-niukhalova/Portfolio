@@ -12,25 +12,26 @@
 
 .slider {
     margin: 0 auto;
-    width: 80%;
-    min-height: 38rem;
+    width: 88%;
+    min-height: 42rem;
     box-shadow: $box-shadow-1;
     background-color: $color-white;
+    
+    @include respond(tab-land-1024) { 
+        min-height: 40rem;
+    }  
 
     @include respond(tab-port) { 
         min-height: 35rem;
-    }
-
-    @include respond(tab-port) { 
         width: 72%;
         position: relative;
-    }
+    } 
 }
 
 .slide {
-    width: 80%;
+    width: 88%;
     display: flex;
-    left: 10%;
+    left: 6%;
 
     @include respond(tab-port) { 
         width: 100%;
@@ -38,7 +39,7 @@
     }
 
     &-certificate {
-        width: 55%;
+        width: 60%;
 
         @include respond(tab-port) { 
             display: none;
@@ -53,13 +54,17 @@
     &-description {
         padding: 2rem 3rem;
         width: 48.5%;
-        height: 38rem;
+        height: 42rem;
 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         opacity: 0;
         border-left: $border-thick;
+
+        @include respond(tab-land-1024) { 
+            height: 40rem;
+        }  
 
         @include respond(tab-port) { 
             width: 100%;
@@ -107,8 +112,8 @@
     Back and Forward btns < > 
    --------------------------- */
 .btn-angle {
-    &--left { left: 5%; }
-    &--right { left: 95%; }
+    &--left { left: 4rem }
+    &--right { left: calc(100% - 4rem); }
 
     @include respond(tab-port) { 
         &--left { left: 8%; }

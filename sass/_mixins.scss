@@ -13,8 +13,8 @@
         @media only screen and (max-width: 64em) { @content; } // >1024px
     }
 
-    @if $breakpoint == tab-land-1100 {
-        @media only screen and (max-width: 68.75em) { @content; } // >1100px
+    @if $breakpoint == tab-land-1200 {
+        @media only screen and (max-width: 75em) { @content; } // >1200px
     }
 
     @if $breakpoint == big-desktop {
