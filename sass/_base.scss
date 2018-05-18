@@ -18,6 +18,14 @@ html {
     font-family: 'Roboto', sans-serif;
     background-color: $color-background-main;
     color: $color-text-main;
+
+    @include respond(tab-land-1100) { // 1rem = 9px
+        font-size: 56.25%;
+    }
+
+    // @include respond(tab-port) { // 1rem = 8px
+    //     font-size: 50%; 
+    // }
 }
 
 body {
@@ -38,8 +46,18 @@ body {
 }
 
 #content { flex-grow: 2; }
-section { margin-top: $margin-huge; }
-section:last-child { margin-bottom: $margin-huge; }
+
+section { 
+    padding: $margin-huge 0;
+
+    @include respond(tab-land-1100) {
+        padding: $margin-normal 0;
+    }
+
+    &:not(:last-of-type) {
+        border-bottom: $border-normal;
+    }
+}
 
 
 .section-title {

@@ -1,7 +1,7 @@
 @keyframes fadeInLeft {
     from {
       opacity: 0;
-      transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
     }
   
     to {
@@ -16,9 +16,9 @@
   }
   
   .fadeInLeft {
-    animation-name: fadeInLeft;
     animation-duration: 1s;
     animation-fill-mode: both;
+    animation-name: fadeInLeft;
   }
 
 
@@ -37,8 +37,8 @@
     // img
     & .animated_obj {
         position: absolute;
-        top: 0;
-        transform: translateX(-200%);
+        top: 50%;
+        transform: translate(-200%, -50%);
         transition: left ease-out .5s;
     }
 
@@ -49,7 +49,7 @@
 
     &.animated_slide { 
         &--cur, &--next, &--prev {
-            & .animated_obj { transform: translateX(0); } 
+            & .animated_obj { transform: translate(0, -50%); } 
         }    
 
         &--cur .animated_obj { left: 0; }

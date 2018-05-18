@@ -31,3 +31,34 @@ $btn-angle--size: 3rem;
         cursor: pointer;
     }
 }
+
+.btn {
+
+    &:link, 
+    &:visited {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all .2s;
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+}
+
+.btn-blue {
+    background-color: transparent;
+    color: $color-blue;
+    border: 2px solid $color-blue;
+
+    &:hover,
+    &:active {
+        color: $color-white;
+        background-color: $color-blue;
+        border: 2px solid $color-blue;
+        box-shadow: 0 4px 8px rgba(#3c4043, .3);
+    }
+}

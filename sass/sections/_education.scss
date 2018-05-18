@@ -2,8 +2,12 @@
       Slider
    ------------ */
 .slide-show {
-    margin-top: $margin-big;
+    margin-top: $margin-normal;
     position: relative;
+
+    @include respond(tab-port) { 
+        margin-top: $margin-small;
+    }
 }
 
 .slider {
@@ -12,6 +16,15 @@
     min-height: 38rem;
     box-shadow: $box-shadow-1;
     background-color: $color-white;
+
+    @include respond(tab-port) { 
+        min-height: 35rem;
+    }
+
+    @include respond(tab-port) { 
+        width: 72%;
+        position: relative;
+    }
 }
 
 .slide {
@@ -19,17 +32,26 @@
     display: flex;
     left: 10%;
 
-    &-sertificate {
+    @include respond(tab-port) { 
+        width: 100%;
+        left: 0;
+    }
+
+    &-certificate {
         width: 55%;
-        border-right: $border-thick;
+
+        @include respond(tab-port) { 
+            display: none;
+        }
 
         img {
-            width: auto;
-            height: 100%;
+            width: 100%;
+            height: auto;
         }
     }
 
     &-description {
+        padding: 2rem 3rem;
         width: 48.5%;
         height: 38rem;
 
@@ -37,7 +59,13 @@
         flex-direction: column;
         align-items: flex-start;
         opacity: 0;
-        padding: 2rem 3rem;
+        border-left: $border-thick;
+
+        @include respond(tab-port) { 
+            width: 100%;
+            height: 35rem;
+            border: none;
+        }
     }
 
     &-name {
@@ -81,6 +109,11 @@
 .btn-angle {
     &--left { left: 5%; }
     &--right { left: 95%; }
+
+    @include respond(tab-port) { 
+        &--left { left: 8%; }
+        &--right { left: 92%; }
+    }
 }
 
 
@@ -89,5 +122,22 @@
    --------------- */
 .slide-links {
     align-self: flex-end;
+
+    @include respond(tab-port) { 
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.btn-certificate {
+    display: none;
+
+    @include respond(tab-port) { 
+        display: inline-block;
+        margin-right: auto;
+        flex: 1 0 max-content;
+    }
 }
 

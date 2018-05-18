@@ -1,0 +1,23 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        // 1em = font-size of the browser = 16px
+        // only screen meens only for screen, for example it will not work for a printed page
+        @media only screen and (max-width: 37.5em) { @content; } //600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content; } //900px
+    }
+
+    @if $breakpoint == tab-land-1024 {
+        @media only screen and (max-width: 64em) { @content; } // >1024px
+    }
+
+    @if $breakpoint == tab-land-1100 {
+        @media only screen and (max-width: 68.75em) { @content; } // >1100px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 81.25em) { @content; } //>1300px
+    }
+}

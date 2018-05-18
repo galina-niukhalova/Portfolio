@@ -1,5 +1,4 @@
 .social-link {
-
     &:link,
     &:visited {
         color: rgba($color-black, .4);
@@ -27,6 +26,12 @@
 }
 
 .social-links {
+    display: none;
+
+    @include respond(big-desktop) {
+        display: block;
+    }
+
     position: fixed;
     top: 50%;
     left: 2.5rem;

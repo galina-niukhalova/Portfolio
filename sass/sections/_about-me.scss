@@ -1,18 +1,32 @@
 .about-me {
-    margin-top: $margin-big;
+    margin-top: $margin-normal;
     padding: 0 5rem;
 
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
 
+    @include respond(tab-port) { 
+        margin-top: $margin-small;
+    }
+
     &--intro {
         flex: 0 0 60%;
+
+        @include respond(tab-port) { 
+            margin: 0 auto;
+            flex: 0 0 80%;
+        }
     }
 
     &--skills {
         flex: 0 0 40%;
         position: relative;
+
+        @include respond(tab-port) { 
+            display: none;
+        }
+        
     }
 
     &--text {
@@ -56,6 +70,7 @@
         transform: translateX(-50%) scale(1.1);
     }
 
+    // html
     &--1 { 
         color: $color-html5; 
         width: 14rem;
@@ -63,17 +78,35 @@
         top: -2rem; 
         left: 60%;
         z-index: 5;
+        transform: translateX(-50%);
+
+        @include respond(tab-land-1024) { 
+            width: 13rem;
+            height: 13rem;
+            left: 50%;
+        }
     }
 
+    // js
     &--2 { 
         color: $color-js; 
         width: 14rem;
         height: 14rem;
         top: 9rem;
-        left: 47%;
+        left: 48%;
         z-index: 3;
+        transform: translateX(-50%);
+
+        @include respond(tab-land-1024) { 
+            width: 13rem;
+            height: 13rem;
+
+            top: 8rem;
+            left: 38%;
+        }
     }
 
+    // css
     &--3 { 
         color: $color-css; 
         width: 12rem;
@@ -81,21 +114,50 @@
         top: 9rem; 
         left: 75%;
         z-index: 3;
+        transform: translateX(-50%);
+
+        @include respond(tab-land-1024) { 
+            width: 11rem;
+            height: 11rem;
+
+            top: 8.5rem;
+            left: 66%;
+        }
     }
 
+    // scss
     &--4 { 
         color: $color-scss; 
         width: 12rem;
         height: 12rem;
         top: 17rem; 
         left: 91%;
+        transform: translateX(-50%);
+
+        @include respond(tab-land-1024) { 
+            width: 11rem;
+            height: 11rem;
+
+            top: 16.5rem;
+            left: 83%;
+        }
     }
 
+    // react
     &--5 { 
         color: $color-react;
         width: 10rem;
         height: 10rem;
         top: 19.5rem; 
         left: 31%;
+        transform: translateX(-50%);
+        
+        @include respond(tab-land-1024) { 
+            width: 9rem;
+            height: 9rem;
+
+            top: 17.5rem;
+            left: 20%;
+        }
     }
 }
