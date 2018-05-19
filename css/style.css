@@ -73,11 +73,18 @@ h4 {
 .animated_fadeIn1,
 .animated_fadeIn2 {
   opacity: 0; }
+  @media only screen and (max-width: 56.25em) {
+    .animated_fadeIn1,
+    .animated_fadeIn2 {
+      opacity: 1; } }
 
 .fadeInLeft {
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: fadeInLeft; }
+  @media only screen and (max-width: 56.25em) {
+    .fadeInLeft {
+      animation: none; } }
 
 /*  ------------------------------------  */
 /*  Animation: slider from left to right  
@@ -270,7 +277,8 @@ nav {
   flex-wrap: nowrap; }
   @media only screen and (max-width: 56.25em) {
     .about-me {
-      margin-top: 3rem; } }
+      margin-top: 3rem;
+      padding: 0; } }
   .about-me--intro {
     flex: 0 0 60%; }
     @media only screen and (max-width: 56.25em) {
@@ -300,7 +308,7 @@ nav {
 .skills-icon {
   font-size: 8rem;
   border: 2px solid #eee;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 22px 4px rgba(0, 0, 0, 0.16);
   border-radius: 50%;
   background-color: #FAFAFA;
   display: flex !important;
@@ -395,6 +403,9 @@ nav {
         top: 18rem;
         left: 19%; } }
 
+#work {
+  background-color: white; }
+
 #projects {
   width: 100%;
   margin-top: 4rem; }
@@ -404,6 +415,7 @@ nav {
 
 .project {
   width: 100%;
+  padding: 0 5rem;
   display: flex;
   flex-wrap: wrap; }
   .project:not(:last-child) {
@@ -417,42 +429,38 @@ nav {
       padding-top: 6rem; }
   @media only screen and (max-width: 56.25em) {
     .project {
-      justify-content: center; }
+      width: 80%;
+      margin: 0 auto;
+      justify-content: center;
+      box-shadow: 0 1px 22px 4px rgba(0, 0, 0, 0.16);
+      padding: 2rem 0; }
       .project:not(:last-child) {
         margin-bottom: 4rem; }
         .project:not(:last-child)::after {
           display: none; } }
   .project-preview {
     flex: 1 0 60%;
-    position: relative;
-    padding-left: 4rem; }
+    position: relative; }
     @media only screen and (max-width: 56.25em) {
       .project-preview {
-        margin: 0 auto;
-        flex: 0 0 80%;
-        margin-bottom: 3rem; } }
+        margin: 0 auto 3rem auto;
+        flex: 0 0 90%; } }
   .project-description {
-    flex: 1 0 calc(40% - 5rem);
-    margin: auto 0;
-    margin-left: 5rem;
-    padding: 0 4rem;
+    margin: auto 0 auto 7%;
+    flex: 0 0 33%;
     display: flex;
     flex-direction: column; }
-    @media only screen and (max-width: 75em) {
-      .project-description {
-        flex: 1 0 calc(40% - 10rem);
-        margin: 0 5rem;
-        padding: 0; } }
     @media only screen and (max-width: 56.25em) {
       .project-description {
         margin: 0 auto;
-        padding: 2rem;
+        padding-top: 2rem;
         flex: 0 0 80%;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-        align-items: center;
-        background-color: #fff; } }
+        border-top: 1px solid #eee; } }
   .project-name {
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .project-name {
+        margin-bottom: 2rem; } }
   .project-about {
     display: flex;
     flex-direction: column; }
@@ -466,8 +474,7 @@ nav {
       display: block; }
     @media only screen and (max-width: 56.25em) {
       .project-intro {
-        margin: 0 auto;
-        max-width: 60rem; } }
+        padding-bottom: 2rem; } }
   .project-technology {
     padding-top: 1rem;
     font-size: 1.4rem; }
@@ -504,9 +511,6 @@ nav {
 .goto-to-website:link, .goto-to-website:visited {
   margin-top: 4rem;
   align-self: flex-start; }
-  @media only screen and (max-width: 56.25em) {
-    .goto-to-website:link, .goto-to-website:visited {
-      align-self: center; } }
 
 .screen img {
   width: 100%; }
@@ -523,29 +527,32 @@ nav {
 
 .slider {
   margin: 0 auto;
-  width: 88%;
+  width: calc(100% - 20rem);
   min-height: 42rem;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 22px 4px rgba(0, 0, 0, 0.16);
   background-color: #fff; }
   @media only screen and (max-width: 64em) {
     .slider {
-      min-height: 40rem; } }
+      min-height: 33rem; } }
   @media only screen and (max-width: 56.25em) {
     .slider {
-      min-height: 35rem;
-      width: 72%;
+      min-height: 36rem;
+      width: 80%;
       position: relative; } }
 
 .slide {
-  width: 88%;
+  width: calc(100% - 20rem);
   display: flex;
-  left: 6%; }
+  left: 10rem; }
   @media only screen and (max-width: 56.25em) {
     .slide {
       width: 100%;
       left: 0; } }
   .slide-certificate {
-    width: 60%; }
+    width: 55%; }
+    @media only screen and (max-width: 64em) {
+      .slide-certificate {
+        width: 50%; } }
     @media only screen and (max-width: 56.25em) {
       .slide-certificate {
         display: none; } }
@@ -553,8 +560,8 @@ nav {
       width: 100%;
       height: auto; }
   .slide-description {
-    padding: 2rem 3rem;
-    width: 48.5%;
+    padding: 3rem 3rem 2rem 3rem;
+    width: 45%;
     height: 42rem;
     display: flex;
     flex-direction: column;
@@ -563,15 +570,22 @@ nav {
     border-left: 2px solid #eee; }
     @media only screen and (max-width: 64em) {
       .slide-description {
-        height: 40rem; } }
+        width: 50%;
+        height: 33rem;
+        padding: 2rem; } }
     @media only screen and (max-width: 56.25em) {
       .slide-description {
-        width: 100%;
-        height: 35rem;
-        border: none; } }
+        margin: 0 auto;
+        width: 80%;
+        height: 36rem;
+        border: none;
+        padding: 2rem 0; } }
   .slide-name {
     margin-bottom: 3rem;
     align-self: center; }
+    @media only screen and (max-width: 64em) {
+      .slide-name {
+        margin-bottom: 2rem; } }
   .slide-topics-list {
     color: #555;
     list-style: none;
@@ -595,16 +609,16 @@ nav {
     Back and Forward btns < > 
    --------------------------- */
 .btn-angle--left {
-  left: 4rem; }
+  left: 6rem; }
 
 .btn-angle--right {
-  left: calc(100% - 4rem); }
+  left: calc(100% - 6rem); }
 
 @media only screen and (max-width: 56.25em) {
   .btn-angle--left {
-    left: 8%; }
+    left: 6%; }
   .btn-angle--right {
-    left: 92%; } }
+    left: 94%; } }
 
 /* --------------- 
       Btn GitHub 
@@ -612,11 +626,15 @@ nav {
 .slide-links {
   align-self: flex-end; }
   @media only screen and (max-width: 56.25em) {
+    .slide-links .social-link {
+      position: absolute;
+      top: calc(100% - 2rem);
+      left: calc(100% - 2rem);
+      transform: translate(-100%, -100%); } }
+  @media only screen and (max-width: 56.25em) {
     .slide-links {
       align-self: stretch;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end; } }
+      display: flex; } }
 
 .btn-certificate {
   display: none; }

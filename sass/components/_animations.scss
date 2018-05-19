@@ -13,12 +13,20 @@
   .animated_fadeIn1, 
   .animated_fadeIn2 {
       opacity: 0;
+
+    @include respond(tab-port) { 
+        opacity: 1;
+    } 
   }
   
   .fadeInLeft {
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: fadeInLeft;
+
+    @include respond(tab-port) { 
+        animation: none;
+    } 
   }
 
 

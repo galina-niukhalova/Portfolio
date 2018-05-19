@@ -8,6 +8,7 @@
 
     @include respond(tab-port) { 
         margin-top: $margin-small;
+        padding: 0;
     }
 
     &--intro {
@@ -33,7 +34,7 @@
         color: $color-text-3;
         line-height: 2.4rem;
 
-        p:not(:last-child) { margin-bottom: 2rem; }
+        p:not(:last-child) { margin-bottom: $margin-smallest; }
     }
 
     &--link {
@@ -85,7 +86,6 @@
         }
 
         @include respond(tab-land-1024) { 
-
             width: 13rem;
             height: 13rem;
             left: 54%;
