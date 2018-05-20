@@ -8,6 +8,7 @@
     @include respond(tab-port) { 
         margin-top: $margin-small;
     }
+    -webkit-tap-highlight-color: transparent;
 }
 
 .slider {
@@ -25,6 +26,10 @@
         min-height: 36rem;
         width: 80%;
         position: relative;
+    } 
+
+    @include respond(phone) {
+        width: 90%;
     } 
 }
 
@@ -79,6 +84,10 @@
             border: none;
             padding: 2rem 0;
         }
+
+        // @include respond(phone) {
+        //     width: 90%;
+        // } 
     }
 
     &-name {
@@ -123,13 +132,61 @@
 /* ---------------------------
     Back and Forward btns < > 
    --------------------------- */
-.btn-angle {
-    &--left { left: 6rem; }
-    &--right { left: calc(100% - 6rem); }
+.slide-show--navi {
+    @include respond(phone) { 
+        margin-top: $margin-small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
-    @include respond(tab-port) { 
-        &--left { left: 6%; }
-        &--right { left: 94%; }
+.btn-angle {
+    &--left { 
+        left: 6rem;
+
+        @include respond(tab-port) { left: 6%; }
+        @include respond(phone) { left: 0; }
+    }
+
+    &--right { 
+        left: calc(100% - 6rem);
+
+        @include respond(tab-port) { left: 94%; }
+        @include respond(phone) { left: 0; }
+    }
+}
+
+.slide-nums {
+    display: none;
+
+    @include respond(phone) { 
+        display: inline-block;
+        width: 13rem;
+        height: 3rem;
+        position: relative;
+
+        font-size: 3rem;
+    }    
+
+    &--num {
+        position: absolute;
+        top: -.5rem;
+        left: calc(50% - 2rem);
+        transform: translate(-50%);
+    }
+
+    &--separate {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &--count {
+        position: absolute;
+        left: calc(50% + 2rem);
+        top: .5rem;
+        transform: translate(-50%);
     }
 }
 

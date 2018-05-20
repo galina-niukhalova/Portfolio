@@ -46,6 +46,10 @@
         }
     }
 
+    @include respond(phone) {
+        width: 90%;
+    } 
+
     &-preview {
         flex: 1 0 60%;
         position: relative;

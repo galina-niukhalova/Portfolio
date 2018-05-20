@@ -15,6 +15,12 @@ html {
   font-family: 'Roboto', sans-serif;
   background-color: #FAFAFA;
   color: #333; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 53.125%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-size: 1.6rem;
@@ -162,13 +168,26 @@ h4 {
    ---------------------------- */
 .btn-angle--left {
   transform: translate(-50%, -50%) rotate(180deg); }
+  @media only screen and (max-width: 37.5em) {
+    .btn-angle--left {
+      transform: translate(0, 0) rotate(180deg); } }
   .btn-angle--left:active {
+    fill: #3792cc;
     transform: translate(-50%, calc(-50% + 3px)) rotate(180deg); }
+    @media only screen and (max-width: 37.5em) {
+      .btn-angle--left:active {
+        transform: translate(0, 3px) rotate(180deg); } }
 
 .btn-angle--right {
   transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 37.5em) {
+    .btn-angle--right {
+      transform: translate(0, 0); } }
   .btn-angle--right:active {
     transform: translate(-50%, calc(-50% + 3px)); }
+    @media only screen and (max-width: 37.5em) {
+      .btn-angle--right:active {
+        transform: translate(0, 3px); } }
 
 .btn-angle--left, .btn-angle--right {
   position: absolute;
@@ -180,6 +199,10 @@ h4 {
   cursor: pointer; }
   .btn-angle--left:hover, .btn-angle--right:hover {
     fill: #3792cc; }
+  @media only screen and (max-width: 37.5em) {
+    .btn-angle--left, .btn-angle--right {
+      position: relative;
+      top: 0; } }
 
 .btn:link, .btn:visited {
   padding: 1rem 2rem;
@@ -204,6 +227,9 @@ h4 {
 
 nav {
   background-color: #fff; }
+  @media only screen and (max-width: 37.5em) {
+    nav {
+      display: none; } }
 
 .nav-list {
   margin-left: 26rem;
@@ -243,20 +269,46 @@ nav {
   width: 100%;
   height: 0;
   padding-top: 42rem; }
+  @media only screen and (max-width: 37.5em) {
+    .banner {
+      padding: 0 0;
+      height: 42rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right bottom, rgba(33, 147, 176, 0.8), rgba(109, 213, 237, 0.8)); } }
 
-#logo img {
-  width: 18rem;
-  box-shadow: 0 0.2rem 0.6rem 0 rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
-  border: 4px solid #fff;
+#logo {
   position: absolute;
   top: 100%;
   left: 5rem;
-  transform: translateY(-90%); }
+  transform: translateY(-90%);
+  width: 18rem;
+  height: 16.72rem;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 64em) {
+    #logo {
+      width: 20rem;
+      height: 18.58rem;
+      left: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    #logo {
+      position: relative;
+      transform: translate(0, 0);
+      top: 0;
+      left: 0; } }
+
+#logo img {
+  width: 16.5rem; }
   @media only screen and (max-width: 64em) {
     #logo img {
-      width: 20rem;
-      left: 4rem; } }
+      width: 18.5rem; } }
 
 #name {
   color: #fff;
@@ -268,6 +320,22 @@ nav {
   font-weight: 300; }
   #name span {
     display: block; }
+  @media only screen and (max-width: 37.5em) {
+    #name {
+      margin-top: 1rem;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      color: #333; } }
+
+@media only screen and (max-width: 37.5em) {
+  .name--first {
+    transform: translateX(-1rem); } }
+
+@media only screen and (max-width: 37.5em) {
+  .name--second {
+    transform: translateX(2rem); } }
 
 .about-me {
   margin-top: 4rem;
@@ -285,6 +353,9 @@ nav {
       .about-me--intro {
         margin: 0 auto;
         flex: 0 0 80%; } }
+    @media only screen and (max-width: 37.5em) {
+      .about-me--intro {
+        flex: 0 0 90%; } }
   .about-me--skills {
     flex: 0 0 40%;
     position: relative; }
@@ -438,6 +509,9 @@ nav {
         margin-bottom: 4rem; }
         .project:not(:last-child)::after {
           display: none; } }
+  @media only screen and (max-width: 37.5em) {
+    .project {
+      width: 90%; } }
   .project-preview {
     flex: 1 0 60%;
     position: relative; }
@@ -520,7 +594,8 @@ nav {
    ------------ */
 .slide-show {
   margin-top: 4rem;
-  position: relative; }
+  position: relative;
+  -webkit-tap-highlight-color: transparent; }
   @media only screen and (max-width: 56.25em) {
     .slide-show {
       margin-top: 3rem; } }
@@ -539,6 +614,9 @@ nav {
       min-height: 36rem;
       width: 80%;
       position: relative; } }
+  @media only screen and (max-width: 37.5em) {
+    .slider {
+      width: 90%; } }
 
 .slide {
   width: calc(100% - 20rem);
@@ -608,17 +686,54 @@ nav {
 /* ---------------------------
     Back and Forward btns < > 
    --------------------------- */
+@media only screen and (max-width: 37.5em) {
+  .slide-show--navi {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; } }
+
 .btn-angle--left {
   left: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .btn-angle--left {
+      left: 6%; } }
+  @media only screen and (max-width: 37.5em) {
+    .btn-angle--left {
+      left: 0; } }
 
 .btn-angle--right {
   left: calc(100% - 6rem); }
+  @media only screen and (max-width: 56.25em) {
+    .btn-angle--right {
+      left: 94%; } }
+  @media only screen and (max-width: 37.5em) {
+    .btn-angle--right {
+      left: 0; } }
 
-@media only screen and (max-width: 56.25em) {
-  .btn-angle--left {
-    left: 6%; }
-  .btn-angle--right {
-    left: 94%; } }
+.slide-nums {
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .slide-nums {
+      display: inline-block;
+      width: 13rem;
+      height: 3rem;
+      position: relative;
+      font-size: 3rem; } }
+  .slide-nums--num {
+    position: absolute;
+    top: -.5rem;
+    left: calc(50% - 2rem);
+    transform: translate(-50%); }
+  .slide-nums--separate {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%); }
+  .slide-nums--count {
+    position: absolute;
+    left: calc(50% + 2rem);
+    top: .5rem;
+    transform: translate(-50%); }
 
 /* --------------- 
       Btn GitHub 

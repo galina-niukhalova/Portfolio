@@ -9,10 +9,12 @@ $(document).ready(() => {
     };
 
     const elements = {
-        socialLinks: $('.social-links'), 
+        socialLinks: $('.social-links'),
         banner: $(".banner")[0],
-        workPreview1: $(".animated_fadeIn1"), 
-        workPreview2: $(".animated_fadeIn2") 
+        workPreview1: $(".animated_fadeIn1"),
+        workPreview2: $(".animated_fadeIn2"),
+
+        slideNum: $(".slide-nums--num")
     };
 
     /* -------------------------------
@@ -78,6 +80,8 @@ $(document).ready(() => {
         $(imgs[cur]).addClass(elementStrings.curSlide);
         $(imgs[prev]).addClass(elementStrings.prevSlide);
         $(imgs[next]).addClass(elementStrings.nextSlide);
+
+        $(elements.slideNum).text(cur + 1);
     };
 
     const findElementIndex = (dir, imgs, currentIndex) => {

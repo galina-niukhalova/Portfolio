@@ -6,15 +6,36 @@ $btn-angle--size: 3rem;
 .btn-angle {
     &--left {
         transform: translate(-50%, -50%) rotate(180deg);
+        
+        @include respond(phone) { 
+            transform: translate(0, 0) rotate(180deg);
+        }
+
         &:active { 
+            fill: $color-blue; 
             transform: translate(-50%, calc(-50% + 3px)) rotate(180deg);
+
+            @include respond(phone) { 
+                transform: translate(0, 3px) rotate(180deg);
+            }
         }
     }
 
 
     &--right {
         transform: translate(-50%, -50%);
-        &:active { transform: translate(-50%, calc(-50% + 3px));}
+
+        @include respond(phone) { 
+            transform: translate(0, 0);
+        }
+
+        &:active { 
+            transform: translate(-50%, calc(-50% + 3px));
+
+            @include respond(phone) { 
+                transform: translate(0, 3px);
+            }
+        }
     }
 
     &--left,
@@ -27,13 +48,17 @@ $btn-angle--size: 3rem;
         fill: $color-text-main;
         transition: fill .2s, transform .2s;
 
-        &:hover { fill: $color-blue; }
+        &:hover { fill: $color-blue;}
         cursor: pointer;
+
+        @include respond(phone) { 
+            position: relative;
+            top: 0;
+        }
     }
 }
 
 .btn {
-
     &:link, 
     &:visited {
         padding: 1rem 2rem;

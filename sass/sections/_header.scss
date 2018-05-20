@@ -7,22 +7,54 @@
     width: 100%;
     height: 0;
     padding-top: 42rem;
+
+    @include respond(phone) {
+        padding: 0 0;
+        height: 42rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right bottom, rgba(#2193b0, .8), rgba(#6dd5ed, .8));
+    } 
 }
 
-#logo img {
-    width: 18rem;
-    box-shadow: 0 0.2rem 0.6rem 0 rgba($color-black, .4);
-    border-radius: 5px;
-    border: 4px solid $color-white;
+#logo {
     position: absolute;
     top: 100%;
     left: 5rem;
     transform: translateY(-90%);
 
+    width: 18rem;
+    height: 16.72rem;
+    background-color: $color-white;
+    border-radius: 5px;
+    border: $border-normal;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     @include respond(tab-land-1024) { 
         width: 20rem;
+        height: 18.58rem;
         left: $margin-normal;
     }   
+
+    @include respond(phone) {
+        position: relative;
+        transform: translate(0, 0);
+        top: 0;
+        left: 0;
+    } 
+}
+
+#logo img {
+    width: 16.5rem;
+
+    @include respond(tab-land-1024) { 
+        width: 18.5rem;
+    }
 }
 
 #name {
@@ -37,5 +69,27 @@
 
     & span {
         display: block;
+    }
+
+    @include respond(phone) {
+        margin-top: 1rem;
+        position: relative;
+        top: 0; left:0;
+        transform: translate(0,0);
+        color: $color-text-main;
+    } 
+}
+
+.name {
+    &--first {
+        @include respond(phone) {
+            transform: translateX(-1rem);
+        }
+    }
+
+    &--second {
+        @include respond(phone) {
+            transform: translateX(2rem);
+        }
     }
 }

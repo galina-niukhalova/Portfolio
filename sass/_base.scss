@@ -19,13 +19,18 @@ html {
     background-color: $color-background-main;
     color: $color-text-main;
 
+
     @include respond(tab-land-1100) { // 1rem = 9px
         font-size: 56.25%;
     }
 
-    // @include respond(tab-port) { // 1rem = 8px
-    //     font-size: 50%; 
-    // }
+    @include respond(tab-port) { // 1rem = 8.5px
+        font-size: 53.125%; 
+    }
+
+    @include respond(phone) { // 1rem = 8px
+        font-size: 50%; 
+    }
 }
 
 body {

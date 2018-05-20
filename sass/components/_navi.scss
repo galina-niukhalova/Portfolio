@@ -1,5 +1,9 @@
 nav {
     background-color: $color-white;
+
+    @include respond(phone) {
+        display: none;
+    } 
 }
 
 .nav-list {

@@ -1,7 +1,5 @@
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
-        // 1em = font-size of the browser = 16px
-        // only screen meens only for screen, for example it will not work for a printed page
         @media only screen and (max-width: 37.5em) { @content; } //600px
     }
 

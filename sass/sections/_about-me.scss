@@ -18,6 +18,10 @@
             margin: 0 auto;
             flex: 0 0 80%;
         }
+
+        @include respond(phone) { 
+            flex: 0 0 90%;
+        }
     }
 
     &--skills {
