@@ -6,48 +6,99 @@ $(document).ready(() => {
         prevSlide: 'animated_slide--prev',
         btnNextSlide: 'js__slide-btn--next',
         btnPrevSlide: 'js__slide-btn--prev',
+
+        // Navi
+        stickyNavi: 'sticky',
+        activeNaviItem: 'nav-item--active',
+
+        // Projects
+        project: 'project',
+        projectPreview: 'project-preview',
+        projectAnimation: 'fadeInLeft'
     };
 
     const elements = {
         socialLinks: $('.social-links'),
         banner: $(".banner")[0],
-        workPreview1: $(".animated_fadeIn1"),
-        workPreview2: $(".animated_fadeIn2"),
+        content: $('#content'),
 
+        // Navi
+        nav: $("nav")[0],
+        navList: $('nav-list'),
+        navAboutMe: $('#nav-about-me'),
+        navWork: $('#nav-work'),
+        navEducation: $('#nav-education'),
+
+        // Sections
+        sectionAbout: $('#about-me'),
+        sectionWork: $('#work'),
+        sectionEducation: $('#education'),
+
+        // Education
         slideNum: $(".slide-nums--num")
     };
 
-    /* -------------------------------
-           sticky social links 
-       ------------------------------- */
-    new Waypoint({
-        element: elements.banner,
-        handler: function (direction) {
-            if (direction == 'down') {
-                elements.socialLinks.css('opacity', 1);
-            }
-            else {
-                elements.socialLinks.css('opacity', 0);
-            }
-        }, offset: -elements.banner.clientHeight / 2
-    });
-
 
     /* -------------------------------
-        animate my work section
+        On scroll
     ------------------------------- */
-    new Waypoint({
-        element: elements.workPreview1[0],
-        handler: () => {
-            elements.workPreview1.addClass('fadeInLeft');
-        }, offset: elements.workPreview1[0].clientHeight + 60
+    $(window).scroll(() => {
+        const offset = 50;
+        const pagePosition = $(document).scrollTop() + offset;
+
+
+        // Sticky navi, social links
+        const contentPosition = elements.content.offset().top;
+        const padding = parseInt(elements.content.css('padding-top').replace('px', ''));
+
+        if (pagePosition >= contentPosition + padding) {
+            $(elements.nav).addClass(elementStrings.stickyNavi);
+            elements.content.css('padding-top', $(elements.nav).height());
+            elements.socialLinks.css('opacity', 1);
+        } else {
+            $(elements.nav).removeClass(elementStrings.stickyNavi);
+            elements.content.css('padding-top', 0);
+            elements.socialLinks.css('opacity', 0);
+        }
+
+
+        // Change active navi
+        const aboutMePosition = elements.sectionAbout.offset().top;
+        const workPosition = elements.sectionWork.offset().top;
+        const educationPosition = elements.sectionEducation.offset().top;
+
+
+        if (pagePosition + $(window).height() >= $(document).height() || pagePosition > educationPosition) {
+            setActiveNaviItem(elements.navEducation)
+        } else if (pagePosition > workPosition && pagePosition <= educationPosition) {
+            setActiveNaviItem(elements.navWork);
+        } else if (pagePosition > aboutMePosition && pagePosition <= workPosition) {
+            setActiveNaviItem(elements.navAboutMe);
+        } else {
+            clearActiveNavi();
+        }
+
+
+        // Animated projects preview
+        const projects = Array.from($(`.${elementStrings.project}`));
+        projects.forEach(project => {
+            if (pagePosition + $(window).height() > $(project).offset().top + $(project).height()/2)
+                $(project).find(`.${elementStrings.projectPreview}`).addClass(elementStrings.projectAnimation);
+        });
     });
 
-    new Waypoint({
-        element: elements.workPreview2[0],
-        handler: () => {
-            elements.workPreview2.addClass('fadeInLeft');
-        }, offset: elements.workPreview2[0].clientHeight + 60
+    const clearActiveNavi = () => {
+        $(`.${elementStrings.activeNaviItem}`).removeClass(elementStrings.activeNaviItem);
+    };
+
+    const setActiveNaviItem = (item) => {
+        clearActiveNavi();
+        $(item).addClass(elementStrings.activeNaviItem);
+    };
+
+
+    elements.navList.on('click', ({ target }) => {
+        setActiveNaviItem(target);
     });
 
 

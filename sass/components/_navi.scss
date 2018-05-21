@@ -1,9 +1,18 @@
 nav {
     background-color: $color-white;
+    border-bottom: $border-normal;
 
     @include respond(phone) {
         display: none;
     } 
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 .nav-list {
@@ -27,39 +36,23 @@ nav {
         padding: 1.7rem 1.7rem;
         text-decoration: none;
         color: $color-blue;
-        border-bottom: .5px solid transparent;
+        border-bottom: $border-thick-transparent;
         font-size: 1.4rem;
         font-weight: 400;
         transition: all .2s;
     
         position: relative;
-
-        // &::after {
-        //     opacity: 0;
-        //     content: '';
-        //     display: block;
-        //     position: absolute;
-        //     width: 2.5rem;
-        //     height: .9rem;
-        //     top: 100%;
-        //     left: 50%;
-        //     transform: translate(-50%, -90%);
-        
-        //     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        //     transition: opacity .2s;
-        
-        //     background-color: $color-background-main;
-        //     z-index: 1;
-        // }
     }
 
-    & a:hover,
-    & a:active  {
-        background-color: rgba($color-blue, .7);
-        color: $color-white;
-
-        &::after {
-            opacity: 1;
+    &--active {
+        & a:link,
+        & a:visited {
+            background-color: rgba($color-blue, .7);
+            color: $color-white;
         }
+    }
+
+    & a:hover {
+        border-bottom: $border-thick-blue;
     }
 }
