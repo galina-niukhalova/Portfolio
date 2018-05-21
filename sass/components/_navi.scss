@@ -1,151 +1,140 @@
+/* ----------------- 
+     Nav
+   ---------------- */
 nav {
     background-color: $color-white;
     border-bottom: $border-normal;
-    
-    @include respond(phone) {
-       position: relative;
-    } 
 
-    & i {
-        @include respond(phone) {
-            font-size: 3rem;
-        } 
+    @include respond(phone) {
+        position: relative;
     }
 
     & .row {
-        max-width: 100%;
         display: flex;
         align-items: center;
-    }
-}
-
-nav.sticky {
-    opacity: 1;
-    transition: opacity .2s;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-
-    & .row {
-        max-width: 120rem;
-    }
-
-    & .nav-list {
-        margin-left: 5rem;
-    }
-}
-
-.nav-list {
-    margin-left: 26rem;
-    list-style: none;
-
-    display: flex;
-    align-items: center;
-
-    @include respond(phone) {
-        margin-left: 0;
-        position: absolute;
-        width: 100%;
-        top: 100%;
-        background-color: rgba($color-white, .98);
-        border-top: $border-thin;
-        border-bottom: $border-thin;
-        flex-direction: column;
-        -webkit-tap-highlight-color: transparent;
-    } 
-}
-
-.nav-list--close {
-    @include respond(phone) {
-        display: none;
-    }
-}
-
-.nav-list--open {
-    @include respond(phone) {
-        display: flex;
-    }
-}
-
-.nav-item {
-    display: flex;
-    border-right: $border-thin;
-
-    @include respond(phone) { border-right: none; }
-
-    &:not(:last-child) {
-        @include respond(phone) { border-bottom: $border-thin; }
-    }
-
-    &:first-child {
-        border-left: $border-thin;
-
-        @include respond(phone) { border-left: none; }
-    }
-
-    & a:link,
-    & a:visited  {
-        padding: 1.7rem 1.7rem;
-        text-decoration: none;
-        color: $color-blue;
-        border-bottom: $border-thick-transparent;
-        font-size: 1.4rem;
-        font-weight: 400;
-        transition: all .2s;
-    
-        position: relative;
+        padding-left: 5rem;
 
         @include respond(phone) {
-            color: $color-text-main;
-            font-size: 1.6rem;
+            width: 90%;
+            padding: 0;
+            margin: 0 auto;
         }
     }
+}
 
-    &--active {
-        & a:link,
-        & a:visited {
-            background-color: rgba($color-blue, .7);
-            color: $color-white;
+.nav {
+    &-list {
+        display: flex;
 
+        @include respond(phone) {
+            margin-left: 0;
+
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            background-color: rgba($color-white, .98);
+            border-top: $border-thin;
+            border-bottom: $border-thin;
+            flex-direction: column;
+            -webkit-tap-highlight-color: transparent;
+            align-items: center;
+        } 
+
+        &--close {
             @include respond(phone) {
-                background-color: transparent;
-                color: $color-text-main;
-                border-bottom: $border-thick-blue;
+                display: none;
+            }
+        }
+
+        &--open {
+            @include respond(phone) {
+                display: flex;
             }
         }
     }
 
-    & a:hover {
-        border-bottom: $border-thick-blue;
+    &-item {
+        display: flex;
+        color: $color-blue;
+
+        @include respond(phone) { 
+            color: $color-text-main;
+        }
+    
+        &:not(:last-child) {
+            @include respond(phone) { border-bottom: $border-thin; }
+        }
+    
+        &:first-child {
+            border-left: $border-thin;
+            @include respond(phone) { border-left: none; }
+        }
+    
+        & a:link,
+        & a:visited  {
+            padding: 2rem 1.7rem;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: currentColor;
+            border-bottom: $border-thick-transparent;
+            border-right: $border-thin;
+            transition: all .2s;
+
+            @include respond(phone) {
+                font-size: 1.6rem;
+                border-right: none;
+            }
+        }
+
+        & a:hover {
+            border-bottom: $border-thick-blue;
+        }
+    
+        &--active {
+            color: $color-white;
+
+            & a:link,
+            & a:visited {
+                background-color: rgba($color-blue, .7);
+            }
+
+            @include respond(phone) {
+                color: $color-text-main;
+                
+                & a:link,
+                & a:visited {
+                    border-bottom: $border-thick-blue;
+                    background-color: transparent;
+                }
+            }
+        }
+    
     }
 }
 
+/* ----------------- 
+     Social icons
+   ---------------- */
 .contacts-navi {
-    flex: 1;
+    opacity: 0;
+    margin-right: auto;
     padding: 0;
-    margin-right: 1rem;
+    transition: all .2s;
 
     @include respond(phone) {
-        order: -1;
-        flex: 1;
-        text-align: left;
-        margin-left: 5%;
         padding: 1.5rem 0;
+        opacity: 1;
     }
 
     & i {
-        margin-right: 1.3rem;
-
-        @include respond(tab-port) {
-            margin-right: 1.2rem;
-            font-size: 2.5rem;
-        } 
+        margin-right: 1.8rem;
+        font-size: 2.5rem;
 
         @include respond(phone) {
             font-size: 2.8rem;
+            margin-right: 1.6rem;
         } 
     }
 
@@ -158,6 +147,32 @@ nav.sticky {
     }
 }
 
+/* ----------------- 
+     Nav-sticky 
+   ---------------- */
+nav.sticky {
+    opacity: 1;
+    transition: opacity .2s;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.1);;
+    border-bottom: none;
+
+    & .contacts-navi {
+        @include respond(tab-land-1200) {
+            opacity: 1;
+        }
+    }
+}
+
+
+/* ----------------- 
+     Nav-mobile 
+   ---------------- */
 .nav-menu {
     display: none;
     width: 2.5rem;
@@ -165,6 +180,7 @@ nav.sticky {
 
     @include respond(phone) {
         display: inline-block;
+        margin: 0;
     } 
 
     &--checkbox {

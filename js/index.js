@@ -77,25 +77,21 @@ $(document).ready(() => {
         On scroll
     ------------------------------- */
     $(window).scroll(() => {
-        const offset = 50;
+        const offset = $('nav').height();
         const pagePosition = $(document).scrollTop() + offset;
 
 
         // Sticky navi, social links
-        const contentPosition = $('#content').offset().top + 200;
-        const padding = parseInt(elements.content.css('padding-top').replace('px', ''));
+        const contentPosition = $('#content').offset().top + 
+            parseInt(elements.content.css('padding-top').replace('px', ''));
 
-        if (pagePosition >= $('#content').offset().top + offset && pagePosition < contentPosition) {
-            $(elements.nav).css('opacity', 0);
-        }
-        else if (pagePosition >= contentPosition) {
+        if (pagePosition >= contentPosition) {
             $(elements.nav).addClass(elementStrings.stickyNavi);
-            $(elements.nav).css('opacity', 1);
             elements.content.css('padding-top', $(elements.nav).height());
             elements.socialLinks.css('opacity', 1);
-        } else {
+        } 
+        else {
             $(elements.nav).removeClass(elementStrings.stickyNavi);
-            $(elements.nav).css('opacity', 1);
             elements.content.css('padding-top', 0);
             elements.socialLinks.css('opacity', 0);
         }
