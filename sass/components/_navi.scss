@@ -1,20 +1,41 @@
 nav {
     background-color: $color-white;
     border-bottom: $border-normal;
-
+    
     @include respond(phone) {
-        display: none;
+       position: relative;
     } 
-    display: flex;
-    align-items: center;
+
+    & i {
+        @include respond(phone) {
+            font-size: 3rem;
+        } 
+    }
+
+    & .row {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+    }
 }
 
 nav.sticky {
+    opacity: 1;
+    transition: opacity .2s;
+
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
+
+    & .row {
+        max-width: 120rem;
+    }
+
+    & .nav-list {
+        margin-left: 5rem;
+    }
 }
 
 .nav-list {
@@ -23,14 +44,46 @@ nav.sticky {
 
     display: flex;
     align-items: center;
+
+    @include respond(phone) {
+        margin-left: 0;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        background-color: rgba($color-white, .98);
+        border-top: $border-thin;
+        border-bottom: $border-thin;
+        flex-direction: column;
+        -webkit-tap-highlight-color: transparent;
+    } 
+}
+
+.nav-list--close {
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.nav-list--open {
+    @include respond(phone) {
+        display: flex;
+    }
 }
 
 .nav-item {
     display: flex;
-    border-right: .5px solid $color-grey-light;
+    border-right: $border-thin;
+
+    @include respond(phone) { border-right: none; }
+
+    &:not(:last-child) {
+        @include respond(phone) { border-bottom: $border-thin; }
+    }
 
     &:first-child {
-        border-left: .5px solid $color-grey-light;
+        border-left: $border-thin;
+
+        @include respond(phone) { border-left: none; }
     }
 
     & a:link,
@@ -44,6 +97,11 @@ nav.sticky {
         transition: all .2s;
     
         position: relative;
+
+        @include respond(phone) {
+            color: $color-text-main;
+            font-size: 1.6rem;
+        }
     }
 
     &--active {
@@ -51,6 +109,12 @@ nav.sticky {
         & a:visited {
             background-color: rgba($color-blue, .7);
             color: $color-white;
+
+            @include respond(phone) {
+                background-color: transparent;
+                color: $color-text-main;
+                border-bottom: $border-thick-blue;
+            }
         }
     }
 
@@ -62,16 +126,87 @@ nav.sticky {
 .contacts-navi {
     flex: 1;
     padding: 0;
-    margin-right: 0;
+    margin-right: 1rem;
+
+    @include respond(phone) {
+        order: -1;
+        flex: 1;
+        text-align: left;
+        margin-left: 5%;
+        padding: 1.5rem 0;
+    }
 
     & i {
-        margin-right: 1.2rem;
+        margin-right: 1.3rem;
+
+        @include respond(tab-port) {
+            margin-right: 1.2rem;
+            font-size: 2.5rem;
+        } 
+
+        @include respond(phone) {
+            font-size: 2.8rem;
+        } 
     }
 
     & .social-link:hover,
     & .social-link:active {
         & i {
             color: $color-blue;
+            transform: scale(1); 
+        }
+    }
+}
+
+.nav-menu {
+    display: none;
+    width: 2.5rem;
+    margin-right: 5%;
+
+    @include respond(phone) {
+        display: inline-block;
+    } 
+
+    &--checkbox {
+        display: none;
+    }
+
+    &--label {
+        display: block;
+        width: 2.5rem;
+        height: 2.5px;
+        background-color: $color-text-main;
+        position: relative;
+    
+        &::after, &::before {
+            content: '';
+            width: 2.5rem;
+            height: 2.5px;
+            position: absolute;
+            left: 0;
+            background-color: $color-text-main;
+            transition: all .2s;
+        }
+    
+        &::after {
+            top: -7px;
+        }
+    
+        &::before {
+            top: 7px;
+        }
+    }
+
+    &--checkbox:checked ~ .nav-menu--label {
+        background-color: transparent;
+        &::after, &::before { top: 0; }
+
+        &::after {
+            transform: rotate(135deg);
+        }
+
+        &::before {
+            transform: rotate(-135deg);
         }
     }
 }

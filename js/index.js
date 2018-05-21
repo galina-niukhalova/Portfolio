@@ -10,6 +10,8 @@ $(document).ready(() => {
         // Navi
         stickyNavi: 'sticky',
         activeNaviItem: 'nav-item--active',
+        navItem: 'nav-item',
+        navCheckbox: 'nav-menu--checkbox',
 
         // Projects
         project: 'project',
@@ -26,6 +28,7 @@ $(document).ready(() => {
         nav: $("nav")[0],
         navList: $('.nav-list'),
         navSocialList: $('.contacts-navi'),
+        navMobileMenu: $('.nav-menu'),
         navAboutMe: $('#nav-about-me'),
         navWork: $('#nav-work'),
         navEducation: $('#nav-education'),
@@ -39,14 +42,36 @@ $(document).ready(() => {
         slideNum: $(".slide-nums--num")
     };
 
-    // navi position
-    const positionNavi = () => {
-        // debugger
-        const margin = $(elements.nav).width() -  1200;
-        if(margin > 0) $(elements.navSocialList).css('margin-right', margin/2);
-        else $(elements.navSocialList).css('margin-right', '1rem');
+    // toggle mobile menu
+    $(elements.navMobileMenu).on('click', ({ target }) => {
+        const navCheckbox = target.closest(`.${elementStrings.navCheckbox}`);
+        if(navCheckbox) {
+            $(navCheckbox)[0].checked ? showMobileMenu() : closeMobileMenu();
+        }
+        
+    });
+
+    elements.navList.on('click', ({ target }) => {
+        const navItem = target.closest(`.${elementStrings.navItem}`);
+        if (navItem) {
+            if ($(`.${elementStrings.navCheckbox}`)[0].checked) {
+                $(`.${elementStrings.navCheckbox}`)[0].checked = false;
+                closeMobileMenu();
+            }
+            
+            setActiveNaviItem(navItem);
+        }
+    });
+
+    const closeMobileMenu = () => {
+        $(elements.navList).addClass('nav-list--close');
+        $(elements.navList).removeClass('nav-list--open');
     };
-    positionNavi();
+
+    const showMobileMenu = () => {
+        $(elements.navList).addClass('nav-list--open');
+        $(elements.navList).removeClass('nav-list--close');
+    }
 
     /* -------------------------------
         On scroll
@@ -57,15 +82,20 @@ $(document).ready(() => {
 
 
         // Sticky navi, social links
-        const contentPosition = elements.content.offset().top;
+        const contentPosition = $('#content').offset().top + 200;
         const padding = parseInt(elements.content.css('padding-top').replace('px', ''));
 
-        if (pagePosition >= contentPosition + padding) {
+        if (pagePosition >= $('#content').offset().top + offset && pagePosition < contentPosition) {
+            $(elements.nav).css('opacity', 0);
+        }
+        else if (pagePosition >= contentPosition) {
             $(elements.nav).addClass(elementStrings.stickyNavi);
+            $(elements.nav).css('opacity', 1);
             elements.content.css('padding-top', $(elements.nav).height());
             elements.socialLinks.css('opacity', 1);
         } else {
             $(elements.nav).removeClass(elementStrings.stickyNavi);
+            $(elements.nav).css('opacity', 1);
             elements.content.css('padding-top', 0);
             elements.socialLinks.css('opacity', 0);
         }
@@ -91,7 +121,7 @@ $(document).ready(() => {
         // Animated projects preview
         const projects = Array.from($(`.${elementStrings.project}`));
         projects.forEach(project => {
-            if (pagePosition + $(window).height() > $(project).offset().top + $(project).height()/2)
+            if (pagePosition + $(window).height() > $(project).offset().top + $(project).height() / 2)
                 $(project).find(`.${elementStrings.projectPreview}`).addClass(elementStrings.projectAnimation);
         });
     });
@@ -104,11 +134,6 @@ $(document).ready(() => {
         clearActiveNavi();
         $(item).addClass(elementStrings.activeNaviItem);
     };
-
-
-    elements.navList.on('click', ({ target }) => {
-        setActiveNaviItem(target);
-    });
 
 
     /* ---------------- 

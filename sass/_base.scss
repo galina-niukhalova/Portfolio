@@ -28,7 +28,7 @@ html {
         font-size: 53.125%; 
     }
 
-    @include respond(phone) { // 1rem = 8px
+    @include respond(tab-port700) { // 1rem = 8px
         font-size: 50%; 
     }
 }
