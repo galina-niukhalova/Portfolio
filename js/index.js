@@ -24,7 +24,8 @@ $(document).ready(() => {
 
         // Navi
         nav: $("nav")[0],
-        navList: $('nav-list'),
+        navList: $('.nav-list'),
+        navSocialList: $('.contacts-navi'),
         navAboutMe: $('#nav-about-me'),
         navWork: $('#nav-work'),
         navEducation: $('#nav-education'),
@@ -38,6 +39,14 @@ $(document).ready(() => {
         slideNum: $(".slide-nums--num")
     };
 
+    // navi position
+    const positionNavi = () => {
+        // debugger
+        const margin = $(elements.nav).width() -  1200;
+        if(margin > 0) $(elements.navSocialList).css('margin-right', margin/2);
+        else $(elements.navSocialList).css('margin-right', '1rem');
+    };
+    positionNavi();
 
     /* -------------------------------
         On scroll

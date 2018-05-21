@@ -50,3 +50,29 @@
         justify-content: center;
     }
 }
+
+// Footer and Navi
+.contacts {
+    &-list {
+        padding: 2rem 1rem;
+        text-align: right;
+    }
+
+    &-item {
+        display: inline-block;
+        i { margin-right: $margin-tiny; }
+    }
+}
+
+.social-link {
+    &:link,
+    &:visited {
+        color: $color-text-4;
+    }
+
+    &:hover,
+    &:active {
+        & .social-icon--tiny { color: $color-text-5; }
+    }
+}
+

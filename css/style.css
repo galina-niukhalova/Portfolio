@@ -163,6 +163,21 @@ h4 {
     display: flex;
     justify-content: center; }
 
+.contacts-list {
+  padding: 2rem 1rem;
+  text-align: right; }
+
+.contacts-item {
+  display: inline-block; }
+  .contacts-item i {
+    margin-right: 1rem; }
+
+.social-link:link, .social-link:visited {
+  color: #aaa; }
+
+.social-link:hover .social-icon--tiny, .social-link:active .social-icon--tiny {
+  color: #ccc; }
+
 /* ---------------------------- 
      Back and Forward btns < > 
    ---------------------------- */
@@ -227,7 +242,9 @@ h4 {
 
 nav {
   background-color: #fff;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center; }
   @media only screen and (max-width: 37.5em) {
     nav {
       display: none; } }
@@ -266,6 +283,16 @@ nav.sticky {
     color: #fff; }
   .nav-item a:hover {
     border-bottom: 2px solid #3792cc; }
+
+.contacts-navi {
+  flex: 1;
+  padding: 0;
+  margin-right: 0; }
+  .contacts-navi i {
+    margin-right: 1.2rem; }
+  .contacts-navi .social-link:hover i,
+  .contacts-navi .social-link:active i {
+    color: #3792cc; }
 
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.7)), url("../img/banner/21.jpg");
@@ -775,18 +802,3 @@ footer {
   font-size: 1.2rem;
   font-weight: 100;
   text-align: center; }
-
-.contacts-list {
-  padding: 2rem 1rem;
-  text-align: right; }
-
-.contacts-item {
-  display: inline-block; }
-  .contacts-item i {
-    margin-right: 1rem; }
-
-.social-link:link, .social-link:visited {
-  color: #aaa; }
-
-.social-link:hover .social-icon--tiny, .social-link:active .social-icon--tiny {
-  color: #ccc; }
