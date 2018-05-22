@@ -4,6 +4,7 @@
   "description": "Galina Niukhalova. Portfolio",
   "main": "index.js",
   "dependencies": {
+    "clipboard": "^2.0.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

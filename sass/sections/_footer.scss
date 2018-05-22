@@ -8,9 +8,14 @@ footer {
     font-size: 1.2rem;
     font-weight: 100;
     text-align: center;
+
+    @include respond(tab-land-1200) { 
+        padding-top: 50px;
+    }  
 }
 
-
-.contacts-footer {
-    
+footer .contacts {
+    @include respond(tab-land-1200) { 
+        display: none;
+    }  
 }

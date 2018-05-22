@@ -7,7 +7,13 @@
     &:hover,
     &:active {
         cursor: pointer;
-        i { transform: scale(1.1); }
+        i { 
+            transform: scale(1.1); 
+
+            @include respond(tab-land-1200) {
+                transform: scale(1); 
+            }
+        }
             
         & .fa-linkedin { color: $color-linkedin; }
         & .fa-github { color: $color-github; }
@@ -59,8 +65,8 @@
     }
 
     &-item {
+        margin-right: $margin-tiny;
         display: inline-block;
-        i { margin-right: $margin-tiny; }
     }
 }
 

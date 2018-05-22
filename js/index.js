@@ -45,10 +45,10 @@ $(document).ready(() => {
     // toggle mobile menu
     $(elements.navMobileMenu).on('click', ({ target }) => {
         const navCheckbox = target.closest(`.${elementStrings.navCheckbox}`);
-        if(navCheckbox) {
+        if (navCheckbox) {
             $(navCheckbox)[0].checked ? showMobileMenu() : closeMobileMenu();
         }
-        
+
     });
 
     elements.navList.on('click', ({ target }) => {
@@ -58,7 +58,7 @@ $(document).ready(() => {
                 $(`.${elementStrings.navCheckbox}`)[0].checked = false;
                 closeMobileMenu();
             }
-            
+
             setActiveNaviItem(navItem);
         }
     });
@@ -82,14 +82,14 @@ $(document).ready(() => {
 
 
         // Sticky navi, social links
-        const contentPosition = $('#content').offset().top + 
+        const contentPosition = $('#content').offset().top +
             parseInt(elements.content.css('padding-top').replace('px', ''));
 
         if (pagePosition >= contentPosition) {
             $(elements.nav).addClass(elementStrings.stickyNavi);
             elements.content.css('padding-top', $(elements.nav).height());
             elements.socialLinks.css('opacity', 1);
-        } 
+        }
         else {
             $(elements.nav).removeClass(elementStrings.stickyNavi);
             elements.content.css('padding-top', 0);
@@ -200,4 +200,49 @@ $(document).ready(() => {
 
         return result;
     };
+
+    /* ------------------------------- 
+      Smothy scroll on nav menu  
+   ------------------------------- */
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            event.preventDefault();
+            const target = $(this.hash);
+            if (target) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 53
+                }, 1000);
+            }
+        });
+
+    const clipboard = {};
+    ['social-link--email', 'navi--email', 'footer--email']
+        .forEach(id => {
+            const clipboard = new ClipboardJS(`#${id}`);
+            clipboard.on('success', function (e) {
+                const btn = $(`#${id}`).closest('.email-tooltip');
+
+                $(btn).attr('tooltip', 'My email address has been copied to your clipboard.');
+                $(btn).addClass('email-tooltip--success');
+
+                $(btn).mouseleave(() => {
+                    setTimeout(() => {
+                        $(btn).attr('tooltip', 'Click to copy my email address to your clipboard.');
+                        $(btn).removeClass('email-tooltip--success');
+                    }, 300);
+                });
+
+                e.clearSelection();
+            });
+        });
 });
+
+
+
+
+
+
+

@@ -47,9 +47,11 @@
                         </a>
                     </li>
                     <li class="contacts-item">
-                        <a class="social-link" href="mailto:galina.hvan1011@gmail.com">
-                            <i class="far fa-envelope social-icon social-icon--small"></i>
-                        </a>
+                        <span class="email-tooltip email-tooltip--bottom" tooltip="Click to copy my email address to your clipboard">
+                            <a class="social-link" id="navi--email" data-clipboard-text="galina.hvan1011@gmail.com">
+                                <i class="far fa-envelope social-icon social-icon--small"></i>
+                            </a>
+                        </span>
                     </li>
                 </ul>
                 <div class="nav-menu">
@@ -365,9 +367,11 @@
                     </a>
                 </li>
                 <li class="social-links-item">
-                    <a class="social-link" href="mailto:galina.hvan1011@gmail.com">
-                        <i class="far fa-envelope social-icon social-icon--big"></i>
-                    </a>
+                    <span class="email-tooltip email-tooltip--right" tooltip="Click to copy my email address to your clipboard">
+                        <a class="social-link" id="social-link--email" data-clipboard-text="galina.hvan1011@gmail.com">
+                            <i class="far fa-envelope social-icon social-icon--big"></i>
+                        </a>
+                    </span>
                 </li>
             </ul>
         </div>
@@ -391,9 +395,11 @@
                     </a>
                 </li>
                 <li class="contacts-item">
-                    <a class="social-link" href="mailto:galina.hvan1011@gmail.com">
-                        <i class="far fa-envelope social-icon social-icon--tiny"></i>
-                    </a>
+                    <span class="email-tooltip email-tooltip--top" tooltip="Click to copy my email address to your clipboard">
+                        <a class="social-link" id="footer--email" data-clipboard-text="galina.hvan1011@gmail.com">
+                            <i class="far fa-envelope social-icon social-icon--tiny"></i>
+                        </a>
+                    </span>
                 </li>
             </ul>
         </div>
@@ -404,7 +410,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./vendors/noframework.waypoints.min.js"></script>
+    <script src="./vendors/clipboard/clipboard.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
