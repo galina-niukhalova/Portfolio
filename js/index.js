@@ -98,9 +98,9 @@ $(document).ready(() => {
 
 
         // Change active navi
-        const aboutMePosition = elements.sectionAbout.offset().top;
-        const workPosition = elements.sectionWork.offset().top;
-        const educationPosition = elements.sectionEducation.offset().top;
+        const aboutMePosition = elements.sectionAbout.offset().top - $('nav').height();
+        const workPosition = elements.sectionWork.offset().top - $('nav').height();
+        const educationPosition = elements.sectionEducation.offset().top - $('nav').height();
 
 
         if (pagePosition + $(window).height() >= $(document).height() || pagePosition > educationPosition) {
@@ -213,8 +213,9 @@ $(document).ready(() => {
             const target = $(this.hash);
             if (target) {
                 $('html, body').animate({
-                    scrollTop: target.offset().top - 53
+                    scrollTop: target.offset().top - $('nav').height()
                 }, 1000);
+
             }
         });
 
