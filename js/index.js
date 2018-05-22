@@ -238,6 +238,17 @@ $(document).ready(() => {
                 e.clearSelection();
             });
         });
+
+
+    $('.btn-certificate').on('click', (e) => {
+        e.preventDefault();
+        $('.popup-img').attr('src', $(e.target).data('img-path'));
+        $('.certificate-popup').addClass('certificate-popup--open');
+    });
+
+    $('.popup-btn-close').on('click', () => {
+        $('.certificate-popup').removeClass('certificate-popup--open');
+    })
 });
 
 

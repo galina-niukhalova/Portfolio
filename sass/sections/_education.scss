@@ -8,6 +8,7 @@
     @include respond(tab-port) { 
         margin-top: $margin-small;
     }
+
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -211,6 +212,12 @@
         align-self: stretch;
         display: flex;
     }
+
+    & .social-icon {
+        @include respond(tab-port) {
+            font-size: 2.5rem;
+        }
+    }
 }
 
 .btn-certificate {
@@ -223,3 +230,117 @@
     }
 }
 
+
+.certificate-popup {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    background-color: rgba($color-black, .8);
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s;
+
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+        background-color: rgba($color-black, .5);
+    }
+
+    &--open {
+        opacity: 1;
+        visibility: visible;
+
+        .popup {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+
+.popup {
+    margin: auto 0;
+    width: 95%;
+    position: relative;
+    text-align: center;
+
+    transform: scale(0);
+    opacity: 0;
+    transition: all .4s .2s;
+
+    @include respond(tab-port700) {
+        width: 100%;
+    }
+
+    &-img {
+        width: 75%;
+        box-shadow: -1px 2px 5px 2px rgba(black, .2);
+
+        @include respond(tab-port700) { 
+           width: 100%;
+        }
+    }
+
+    &-btn-close {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        top: 0;
+        right: 5%;
+        box-shadow: -1px 2px 5px 2px rgba(black, .3);
+        background-color: white;
+        border-radius: 50%;
+        transition: box-shadow .2s;
+        outline: none;
+        border: none;
+    
+        transform: translateY(-100%);
+    
+        @include respond(tab-port700) { 
+            top: 1rem;
+            right: 1rem;
+
+            transform: translateY(0);
+        }
+
+        &::before, 
+        &::after {
+            content: "";
+            height: 2px;
+            width: 2.5rem;
+            background-color: $color-text-main;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }  
+    
+        &::before {
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+    
+        &::after {
+            transform: translate(-50%, -50%) rotate(-135deg);
+        }
+    
+        &:hover, &:active {
+            box-shadow: -1px 2px 5px 4px rgba(black, .3);
+        }
+    
+        &:active {
+            transform: translateY(calc(-100% + 2px));
+
+            @include respond(tab-port700) { 
+                transform: translateY(2px);
+            }
+        }
+    }
+}
