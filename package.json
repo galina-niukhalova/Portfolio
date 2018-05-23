@@ -14,9 +14,10 @@
     "postcss-cli": "^5.0.0"
   },
   "scripts": {
+    "build:sass": "node-sass sass/main.scss css/style-raw.css",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.prefix.css",
-    "build:css": "npm-run-all watch:sass prefix:css"
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style-raw.css -o css/style.css",
+    "build": "npm-run-all build:sass prefix:css"
   },
   "repository": {
     "type": "git",
