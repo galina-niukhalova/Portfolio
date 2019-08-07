@@ -9,11 +9,12 @@
     <title>Portfolio</title>
 
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto:100,300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto:100,300,300i,400,400i"
+        rel="stylesheet">
 
     <!-- social icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="vendors/html5-device-mockups/dist/device-mockups.min.css">
 </head>
 
@@ -32,7 +33,8 @@
             <div class="row">
                 <ul class="contacts-list contacts-navi">
                     <li class="contacts-item">
-                        <a class="social-link" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/" target="_blank">
+                        <a class="social-link" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/"
+                            target="_blank">
                             <i class="fab fa-linkedin social-icon social-icon--small"></i>
                         </a>
                     </li>
@@ -47,7 +49,8 @@
                         </a>
                     </li>
                     <li class="contacts-item">
-                        <span class="email-tooltip email-tooltip--bottom" tooltip="Click to copy my email address to your clipboard">
+                        <span class="email-tooltip email-tooltip--bottom"
+                            tooltip="Click to copy my email address to your clipboard">
                             <a class="social-link" id="navi--email" data-clipboard-text="galina.hvan1011@gmail.com">
                                 <i class="far fa-envelope social-icon social-icon--small"></i>
                             </a>
@@ -81,18 +84,21 @@
                     <span class="about-me--text">
                         <p>Hi, I'm Galina. Nice to meet you.</p>
                         <p>Let me introduce myself.</p>
-                        <p>I'm a frontend developer, currently based in Bangkok, Thailand. 5 years ago I graduated a technical
-                            university in my home city Novosibirsk, Russia. Since this time, I've worked in different IT
-                            fields: support, development, quality assurance. You can get more information about my work experience
-                            in my
-                            <a class="about-me--link" target="_blank" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/">LinkedIn profile</a>.
+                        <p>I'm a passionate and creative front-end developer, who cares about code and product quality.
+                            I've graduated a technical
+                            university in my home city Novosibirsk, Russia. During my career, I've been working in
+                            different IT
+                            fields such as development and quality assurance. For more information about my work
+                            experience
+                            visit the
+                            <a class="about-me--link" target="_blank"
+                                href="https://www.linkedin.com/in/galina-niukhalova-76707013a/">LinkedIn profile</a>.
                         </p>
-                        <p>I started my frontend journey a year ago. During this time, I focused on studying and building foundations
-                            to become a good frontend developer. Some of my educational projects you can find
-                            <a class="about-me--link" href="#education">here</a>. At the same time, I was working on my own website. Read about this product
-                            <a href="#project-hideframe" class="about-me--link">below.</a>
+                        <p>I'm specializing in technologies such as
+                            HTML,&nbsp;CSS,&nbsp;JS,&nbsp;React,&nbsp;Redux,&nbsp;CSS-in-JS,&nbsp;GraphQL,&nbsp;webpack&nbsp;and&nbsp;more.
                         </p>
-                        <p>Currently, I'm looking for a new opportunity. If you are interested in me, I’d love to hear from
+                        <p>Currently, I'm looking for a new opportunity in Singapore. If you are interested in me, I’d love to hear
+                            from
                             you.
                         </p>
                     </span>
@@ -112,28 +118,70 @@
             <div class="row">
                 <h2 class="section-title">My work</h2>
                 <div id="projects">
+                    <div class="project" id="project-omise">
+                        <div class="project-preview animated_fadeIn2">
+                            <div class="device-wrapper device-imac">
+                                <div class="device" data-device="iMac" data-orientation="portrait" data-color="black">
+                                    <div class="screen screen-ipad">
+                                        <img src="img/projects/omise-dashboard_mac.png"
+                                            alt="Screenshot of 'Omise Dashboard">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='project-description'>
+                            <h3 class="project-name">Omise dashboard</h3>
+                            <figure class="project-about">
+                                <p class="project-intro">
+                                    <span>Omise is a payment gateway for Thailand, Japan and Singapore</span>
+                                    <span>
+                                        The dashboard application provides transaction information, account-level
+                                        settings,
+                                        and example code
+                                    </span>
+                                </p>
+                                <figcaption>
+                                    <div class="project-technology">
+                                        <span>#reactJS</span>
+                                        <span>#es6</span>
+                                        <span>#styled-components</span>
+                                        <span>#graphQL</span>
+                                        <span>#webpack</span>
+                                        <span>#react-testing-library</span>
+                                        <span>#jest+enzyme</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            <a href="https://dashboard2.omise.co" target="_blank"
+                                class="btn btn-blue goto-to-website">Visit the website</a>
+                        </div>
+                    </div>
+
                     <div class="project" id="project-hideframe">
                         <div class="project-preview animated_fadeIn1">
                             <div class="device-wrapper device-imac">
                                 <div class="device" data-device="iMac" data-orientation="portrait" data-color="black">
                                     <div class="screen screen-ipad">
-                                        <img src="img/projects/hideframe_mac.png" 
-                                             alt="Screenshot of 'Hideframe.com' project">
+                                        <img src="img/projects/hideframe_mac.png"
+                                            alt="Screenshot of 'Hideframe.com' project">
                                     </div>
                                 </div>
                             </div>
                             <div class="device-wrapper device-ipad">
-                                <div class="device" data-device="iPadAir2" data-orientation="landscape" data-color="black">
+                                <div class="device" data-device="iPadAir2" data-orientation="landscape"
+                                    data-color="black">
                                     <div class="screen screen-ipad">
-                                        <img src="img/projects/hideframe_ipad.jpg" 
-                                             alt="Screenshot of 'Hideframe.com' project">
+                                        <img src="img/projects/hideframe_ipad.jpg"
+                                            alt="Screenshot of 'Hideframe.com' project">
                                     </div>
                                 </div>
                             </div>
                             <div class="device-wrapper device-iphone">
-                                <div class="device" data-device="iPhone7" data-orientation="portrait" data-color="black">
+                                <div class="device" data-device="iPhone7" data-orientation="portrait"
+                                    data-color="black">
                                     <div class="screen">
-                                        <img src="img/projects/hideframe_iphone.jpg" alt="Screenshot of 'Hideframe.com' project">
+                                        <img src="img/projects/hideframe_iphone.jpg"
+                                            alt="Screenshot of 'Hideframe.com' project">
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +191,8 @@
                             <figure class="project-about">
                                 <p class="project-intro">
                                     <span>HideFrame is a web photo editor for people who sell their car.</span>
-                                    <span>Using its, users can hide a car plate number on pictures simply and quickly.</span>
+                                    <span>Using its, users can hide a car plate number on pictures simply and
+                                        quickly.</span>
                                 </p>
                                 <figcaption>
                                     <div class="project-technology">
@@ -157,7 +206,8 @@
                                     </div>
                                 </figcaption>
                             </figure>
-                            <a href="http://hideframe.com/" target="_blank" class="btn btn-blue goto-to-website">Visit the website</a>
+                            <a href="http://hideframe.com/" target="_blank" class="btn btn-blue goto-to-website">Visit
+                                the website</a>
                         </div>
                     </div>
 
@@ -166,22 +216,26 @@
                             <div class="device-wrapper device-imac">
                                 <div class="device" data-device="iMac" data-orientation="portrait" data-color="black">
                                     <div class="screen screen-ipad">
-                                        <img src="img/projects/goal-tracker_mac.png" alt="Screenshot of 'Goal Tracker' project">
+                                        <img src="img/projects/goal-tracker_mac.png"
+                                            alt="Screenshot of 'Goal Tracker' project">
                                     </div>
                                 </div>
                             </div>
                             <div class="device-wrapper device-ipad">
-                                <div class="device" data-device="iPadAir2" data-orientation="landscape" data-color="black">
+                                <div class="device" data-device="iPadAir2" data-orientation="landscape"
+                                    data-color="black">
                                     <div class="screen screen-ipad">
-                                        <img src="img/projects/goal-tracker_ipad.jpg" 
-                                             alt="Screenshot of 'Goal Tracker' project">
+                                        <img src="img/projects/goal-tracker_ipad.jpg"
+                                            alt="Screenshot of 'Goal Tracker' project">
                                     </div>
                                 </div>
                             </div>
                             <div class="device-wrapper device-iphone">
-                                <div class="device" data-device="iPhone7" data-orientation="portrait" data-color="black">
+                                <div class="device" data-device="iPhone7" data-orientation="portrait"
+                                    data-color="black">
                                     <div class="screen">
-                                        <img src="img/projects/goal-tracker_iphone.jpg" alt="Screenshot of 'Goal Tracker' project">
+                                        <img src="img/projects/goal-tracker_iphone.jpg"
+                                            alt="Screenshot of 'Goal Tracker' project">
                                     </div>
                                 </div>
                             </div>
@@ -192,7 +246,8 @@
                                 <p class="project-intro">
                                     <span>Goal tracker is a modified version of TODO.</span>
                                     <span>
-                                        By using this website, users can create goals, split them into small subgoals and track the status of each item.
+                                        By using this website, users can create goals, split them into small subgoals
+                                        and track the status of each item.
                                     </span>
                                 </p>
                                 <figcaption>
@@ -206,7 +261,8 @@
                                     </div>
                                 </figcaption>
                             </figure>
-                            <a href="https://galina-niukhalova.github.io/goal-tracker/" target="_blank" class="btn btn-blue goto-to-website">Visit the website</a>
+                            <a href="https://galina-niukhalova.github.io/goal-tracker/" target="_blank"
+                                class="btn btn-blue goto-to-website">Visit the website</a>
                         </div>
                     </div>
                 </div>
@@ -227,11 +283,13 @@
                             <ul class="slide-topics-list">
                                 <li class="slide-topic--item">
                                     <span class="slide-topic--mark">*</span>
-                                    <span class="slide-topic--text">How to build a static website using HTML5 and CSS3.</span>
+                                    <span class="slide-topic--text">How to build a static website using HTML5 and
+                                        CSS3.</span>
                                 </li>
                                 <li class="slide-topic--item">
                                     <span class="slide-topic--mark">*</span>
-                                    <span class="slide-topic--text">How to build a responsive website which looks good on different devices.</span>
+                                    <span class="slide-topic--text">How to build a responsive website which looks good
+                                        on different devices.</span>
                                 </li>
                                 <li class="slide-topic--item">
                                     <span class="slide-topic--mark">*</span>
@@ -239,8 +297,11 @@
                                 </li>
                             </ul>
                             <div class="slide-links">
-                                <a href="#" class="btn btn-blue btn-certificate" data-img-path="./img/cources/HTML-and-css3.jpeg">Look at the certificate</a>
-                                <a class="social-link" href="https://github.com/galina-niukhalova/udemy-html5-and-css3-course" target='_blank'>
+                                <a href="#" class="btn btn-blue btn-certificate"
+                                    data-img-path="./img/cources/HTML-and-css3.jpeg">Look at the certificate</a>
+                                <a class="social-link"
+                                    href="https://github.com/galina-niukhalova/udemy-html5-and-css3-course"
+                                    target='_blank'>
                                     <i class="fab fa-github social-icon social-icon--small"></i>
                                 </a>
                             </div>
@@ -249,7 +310,8 @@
 
                     <div class="slide animated_lr animated_slide--next">
                         <div class="slide-certificate slide-wrapper">
-                            <img class="animated_obj" src="./img/cources/advanced-css-and-sass.jpeg" alt="Advanced CSS and Sass.">
+                            <img class="animated_obj" src="./img/cources/advanced-css-and-sass.jpeg"
+                                alt="Advanced CSS and Sass.">
                         </div>
                         <div class="slide-description">
                             <h3 class="slide-name">Advanced CSS and Sass</h3>
@@ -269,8 +331,11 @@
                                 </li>
                             </ul>
                             <div class="slide-links">
-                                <a href="#" target="_blank" class="btn btn-blue btn-certificate" data-img-path="./img/cources/advanced-css-and-sass.jpeg">Look at the certificate</a>
-                                <a class="social-link" href="https://github.com/galina-niukhalova/udemy-advanced-css-and-sass" target='_blank'>
+                                <a href="#" target="_blank" class="btn btn-blue btn-certificate"
+                                    data-img-path="./img/cources/advanced-css-and-sass.jpeg">Look at the certificate</a>
+                                <a class="social-link"
+                                    href="https://github.com/galina-niukhalova/udemy-advanced-css-and-sass"
+                                    target='_blank'>
                                     <i class="fab fa-github social-icon social-icon--small"></i>
                                 </a>
                             </div>
@@ -295,11 +360,13 @@
                                 </li>
                                 <li class="slide-topic--item">
                                     <span class="slide-topic--mark">*</span>
-                                    <span class="slide-topic--text">What is asynchronous JS and how to make AJAX request.</span>
+                                    <span class="slide-topic--text">What is asynchronous JS and how to make AJAX
+                                        request.</span>
                                 </li>
                                 <li class="slide-topic--item">
                                     <span class="slide-topic--mark">*</span>
-                                    <span class="slide-topic--text">What is MVC pattern and how to use it in a project.</span>
+                                    <span class="slide-topic--text">What is MVC pattern and how to use it in a
+                                        project.</span>
                                 </li>
                                 <li class="slide-topic--item">
                                     <span class="slide-topic--mark">*</span>
@@ -307,8 +374,10 @@
                                 </li>
                             </ul>
                             <div class="slide-links">
-                                <a href="#" target="_blank" class="btn btn-blue btn-certificate" data-img-path="./img/cources/js.jpeg">Look at the certificate</a>
-                                <a class="social-link" href="https://github.com/galina-niukhalova/udemy-javaScript" target='_blank'>
+                                <a href="#" target="_blank" class="btn btn-blue btn-certificate"
+                                    data-img-path="./img/cources/js.jpeg">Look at the certificate</a>
+                                <a class="social-link" href="https://github.com/galina-niukhalova/udemy-javaScript"
+                                    target='_blank'>
                                     <i class="fab fa-github social-icon social-icon--small"></i>
                                 </a>
                             </div>
@@ -318,7 +387,8 @@
 
                     <div class="slide animated_lr animated_slide--prev">
                         <div class="slide-certificate slide-wrapper">
-                            <img class="animated_obj" src="./img/cources/modern-react-with-redux.jpeg" alt="Modern React with Redux.">
+                            <img class="animated_obj" src="./img/cources/modern-react-with-redux.jpeg"
+                                alt="Modern React with Redux.">
                         </div>
                         <div class="slide-description">
                             <h3 class="slide-name">React with Redux</h3>
@@ -342,8 +412,12 @@
                                 </li>
                             </ul>
                             <div class="slide-links">
-                                <a href="#" target="_blank" class="btn btn-blue btn-certificate" data-img-path="./img/cources/modern-react-with-redux.jpeg">Look at the certificate</a>
-                                <a class="social-link" href="https://github.com/galina-niukhalova/udemy-modern-react-with-redux" target='_blank'>
+                                <a href="#" target="_blank" class="btn btn-blue btn-certificate"
+                                    data-img-path="./img/cources/modern-react-with-redux.jpeg">Look at the
+                                    certificate</a>
+                                <a class="social-link"
+                                    href="https://github.com/galina-niukhalova/udemy-modern-react-with-redux"
+                                    target='_blank'>
                                     <i class="fab fa-github social-icon social-icon--small"></i>
                                 </a>
                             </div>
@@ -352,7 +426,9 @@
                 </div>
                 <div class="slide-show--navi">
                     <svg class="btn-angle--left js__slide-btn--prev" viewBox="0 0 14 28">
-                        <path fillrule="evenodd" d="M 13.44 14.58C 13.44 14.58 1.65 27.07 1.65 27.07 1.34 27.39 0.85 27.39 0.54 27.07 0.24 26.75 0.24 26.22 0.54 25.9 0.54 25.9 11.78 14 11.78 14 11.78 14 0.54 2.1 0.54 2.1 0.24 1.77 0.24 1.25 0.54 0.93 0.85 0.6 1.34 0.6 1.65 0.93 1.65 0.93 13.44 13.41 13.44 13.41 13.74 13.74 13.74 14.26 13.44 14.58Z"></path>
+                        <path fillrule="evenodd"
+                            d="M 13.44 14.58C 13.44 14.58 1.65 27.07 1.65 27.07 1.34 27.39 0.85 27.39 0.54 27.07 0.24 26.75 0.24 26.22 0.54 25.9 0.54 25.9 11.78 14 11.78 14 11.78 14 0.54 2.1 0.54 2.1 0.24 1.77 0.24 1.25 0.54 0.93 0.85 0.6 1.34 0.6 1.65 0.93 1.65 0.93 13.44 13.41 13.44 13.41 13.74 13.74 13.74 14.26 13.44 14.58Z">
+                        </path>
                     </svg>
                     <div class="slide-nums">
                         <span class="slide-nums--num">1</span>
@@ -360,7 +436,9 @@
                         <span class="slide-nums--count">4</span>
                     </div>
                     <svg class="btn-angle--right js__slide-btn--next" viewBox="0 0 14 28">
-                        <path fillrule="evenodd" d="M 13.44 14.58C 13.44 14.58 1.65 27.07 1.65 27.07 1.34 27.39 0.85 27.39 0.54 27.07 0.24 26.75 0.24 26.22 0.54 25.9 0.54 25.9 11.78 14 11.78 14 11.78 14 0.54 2.1 0.54 2.1 0.24 1.77 0.24 1.25 0.54 0.93 0.85 0.6 1.34 0.6 1.65 0.93 1.65 0.93 13.44 13.41 13.44 13.41 13.74 13.74 13.74 14.26 13.44 14.58Z"></path>
+                        <path fillrule="evenodd"
+                            d="M 13.44 14.58C 13.44 14.58 1.65 27.07 1.65 27.07 1.34 27.39 0.85 27.39 0.54 27.07 0.24 26.75 0.24 26.22 0.54 25.9 0.54 25.9 11.78 14 11.78 14 11.78 14 0.54 2.1 0.54 2.1 0.24 1.77 0.24 1.25 0.54 0.93 0.85 0.6 1.34 0.6 1.65 0.93 1.65 0.93 13.44 13.41 13.44 13.41 13.74 13.74 13.74 14.26 13.44 14.58Z">
+                        </path>
                     </svg>
                 </div>
             </div>
@@ -375,7 +453,8 @@
         <div class='social-links'>
             <ul class="social-links-list">
                 <li class="social-links-item">
-                    <a class="social-link" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/" target="_blank">
+                    <a class="social-link" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/"
+                        target="_blank">
                         <i class="fab fa-linkedin social-icon social-icon--big"></i>
                     </a>
                 </li>
@@ -390,7 +469,8 @@
                     </a>
                 </li>
                 <li class="social-links-item">
-                    <span class="email-tooltip email-tooltip--right" tooltip="Click to copy my email address to your clipboard">
+                    <span class="email-tooltip email-tooltip--right"
+                        tooltip="Click to copy my email address to your clipboard">
                         <a class="social-link" id="social-link--email" data-clipboard-text="galina.hvan1011@gmail.com">
                             <i class="far fa-envelope social-icon social-icon--big"></i>
                         </a>
@@ -403,7 +483,8 @@
         <div class="contacts row">
             <ul class="contacts-list">
                 <li class="contacts-item">
-                    <a class="social-link" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/" target="_blank">
+                    <a class="social-link" href="https://www.linkedin.com/in/galina-niukhalova-76707013a/"
+                        target="_blank">
                         <i class="fab fa-linkedin social-icon social-icon--tiny"></i>
                     </a>
                 </li>
@@ -418,7 +499,8 @@
                     </a>
                 </li>
                 <li class="contacts-item">
-                    <span class="email-tooltip email-tooltip--top" tooltip="Click to copy my email address to your clipboard">
+                    <span class="email-tooltip email-tooltip--top"
+                        tooltip="Click to copy my email address to your clipboard">
                         <a class="social-link" id="footer--email" data-clipboard-text="galina.hvan1011@gmail.com">
                             <i class="far fa-envelope social-icon social-icon--tiny"></i>
                         </a>

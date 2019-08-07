@@ -722,7 +722,7 @@ nav.sticky {
     margin-bottom: 6rem; }
     .project:not(:last-child)::after {
       width: 12rem;
-      content: '';
+      content: "";
       display: block;
       border-bottom: 2px solid #eee;
       margin: 0 auto;
@@ -773,7 +773,7 @@ nav.sticky {
     padding-bottom: 4rem;
     border-bottom: 0.5px solid #eee; }
     .project-intro span:not(:last-child) {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       display: block; }
     @media only screen and (max-width: 56.25em) {
       .project-intro {
@@ -785,8 +785,8 @@ nav.sticky {
       display: inline-block;
       padding: 0 3px;
       color: #666;
-      margin-right: .3rem;
-      margin-bottom: .3rem; }
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem; }
 
 .device-imac {
   max-width: 80% !important;
@@ -817,6 +817,10 @@ nav.sticky {
 
 .screen img {
   width: 100%; }
+
+@media only screen and (max-width: 56.25em) {
+  #project-omise .device-imac {
+    margin: auto; } }
 
 /* ------------ 
       Slider
@@ -1046,6 +1050,7 @@ nav.sticky {
     transition: box-shadow .2s;
     outline: none;
     border: none;
+    cursor: pointer;
     transform: translateX(-50%); }
     @media only screen and (max-width: 43.75em) {
       .popup-btn-close {

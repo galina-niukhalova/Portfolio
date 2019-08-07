@@ -1,163 +1,166 @@
-#work { 
-    background-color: white;
+#work {
+  background-color: white;
 }
 
 #projects {
-    width: 100%;
-    margin-top: $margin-normal;
+  width: 100%;
+  margin-top: $margin-normal;
 
-    @include respond(tab-port) { 
-        margin-top: $margin-small;
-    }
+  @include respond(tab-port) {
+    margin-top: $margin-small;
+  }
 }
 
-
 .project {
-    width: 100%;
-    padding: 0 $margin-huge;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  padding: 0 $margin-huge;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    margin-bottom: 6rem;
+
+    &::after {
+      width: 12rem;
+      content: "";
+      display: block;
+      border-bottom: 2px solid $color-grey-light;
+      margin: 0 auto;
+      padding-top: 6rem;
+    }
+  }
+
+  @include respond(tab-port) {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    box-shadow: $box-shadow-1;
+    padding: 2rem 0;
 
     &:not(:last-child) {
-        margin-bottom: 6rem;
+      margin-bottom: $margin-normal;
+      &::after {
+        display: none;
+      }
+    }
+  }
 
-        &::after {
-            width: 12rem;
-            content: '';
-            display: block;
-            border-bottom: 2px solid $color-grey-light;
-            margin: 0 auto;
-            padding-top: 6rem;
-        }
+  @include respond(phone) {
+    width: 90%;
+  }
+
+  &-preview {
+    flex: 1 0 60%;
+    position: relative;
+
+    @include respond(tab-port) {
+      margin: 0 auto $margin-small auto;
+      flex: 0 0 90%;
+    }
+  }
+
+  &-description {
+    margin: auto 0 auto 7%;
+    flex: 0 0 33%;
+
+    display: flex;
+    flex-direction: column;
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+      padding-top: 2rem;
+      flex: 0 0 80%;
+      border-top: $border-normal;
+    }
+  }
+
+  &-name {
+    margin-bottom: $margin-small;
+
+    @include respond(tab-port) {
+      margin-bottom: $margin-smallest;
+    }
+  }
+
+  &-about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-intro {
+    color: $color-text-3;
+    font-size: 1.6rem;
+    padding-bottom: 4rem;
+
+    & span:not(:last-child) {
+      margin-bottom: 0.5rem;
+      display: block;
     }
 
-    @include respond(tab-port) { 
-        width: 80%;
-        margin: 0 auto;
-        justify-content: center;
-        box-shadow: $box-shadow-1;
-        padding: 2rem 0;
+    border-bottom: 0.5px solid $color-grey-light;
 
-        &:not(:last-child) {
-            margin-bottom: $margin-normal;
-            &::after {
-                display: none;
-            }
-        }
+    @include respond(tab-port) {
+      padding-bottom: 2rem;
     }
+  }
 
-    @include respond(phone) {
-        width: 90%;
-    } 
+  &-technology {
+    padding-top: 1rem;
+    font-size: 1.4rem;
 
-    &-preview {
-        flex: 1 0 60%;
-        position: relative;
-        
-        @include respond(tab-port) { 
-            margin: 0 auto $margin-small auto;
-            flex: 0 0 90%;
-        }
+    span {
+      display: inline-block;
+      padding: 0 3px;
+      color: #666;
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
     }
-
-    &-description {
-        margin: auto 0 auto 7%;
-        flex: 0 0 33%;
-
-        display: flex; 
-        flex-direction: column;
-        
-
-        @include respond(tab-port) { 
-            margin: 0 auto;
-            padding-top: 2rem;
-            flex: 0 0 80%;
-            border-top: $border-normal;
-        }
-    }
-
-    &-name {
-        margin-bottom: $margin-small;
-
-        @include respond(tab-port) { 
-            margin-bottom: $margin-smallest;
-        }
-    }
-
-    &-about {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &-intro {
-        color: $color-text-3;
-        font-size: 1.6rem;
-        padding-bottom: 4rem;
-
-        & span:not(:last-child) {
-            margin-bottom: .5rem;
-            display: block;
-        }
-
-        border-bottom: .5px solid $color-grey-light;
-
-        @include respond(tab-port) { 
-            padding-bottom: 2rem;   
-        }
-    }
-
-    &-technology {
-        padding-top: 1rem;
-        font-size: 1.4rem;
-
-        span {
-            display: inline-block;
-            padding: 0 3px;
-            color: #666;
-            margin-right: .3rem;
-            margin-bottom: .3rem;
-        }
-    }
+  }
 }
 
 .device {
+  &-imac {
+    max-width: 80% !important;
+    z-index: 0;
+  }
 
-    &-imac {
-        max-width: 80% !important;
-        z-index: 0;
-    }
+  &-ipad {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-101%);
+    max-width: 50% !important;
+  }
 
-    &-ipad {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        z-index: 1;
-        transform: translateY(-101%);
-        max-width: 50% !important;
-    }
+  &-iphone {
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-65%, -100%);
+    max-width: 15% !important;
+  }
 
-    &-iphone {
-        z-index: 2;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translate(-65%, -100%);
-        max-width: 15% !important;
-    }
-
-    &-center {
-        margin: 0 auto;
-    }
+  &-center {
+    margin: 0 auto;
+  }
 }
 
 .goto-to-website {
-    &:link, 
-    &:visited {
-        margin-top: $margin-normal;
-        align-self: flex-start;
-    }
+  &:link,
+  &:visited {
+    margin-top: $margin-normal;
+    align-self: flex-start;
+  }
 }
 
 .screen img {
-    width: 100%;
+  width: 100%;
+}
+
+@include respond(tab-port) {
+  #project-omise .device-imac {
+    margin: auto;
+  }
 }
